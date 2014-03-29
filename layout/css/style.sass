@@ -1,0 +1,620 @@
+@import "compass/css3/"
+
+$red     : #CB0019
+$blue    : #092ED8
+$blue2   : #00BBD1
+$blue3   : #0049C1
+$blue4   : #00FFFF
+$blue5   : #00BAFB
+$blue6   : #244FBF
+$blue7   : #0E2A60
+$gray    : #474654
+$gray2   : #D0D0D4
+$gray3   : #DDE3E8
+$violet  : #1E1B36
+$violet2 : #41377D
+$orange  : #FFBA00
+$orange2 : #FF9600
+$black   : #13121B
+$white   : white
+$c_name  : red, blue, blue2, blue3, blue4, blue5, blue6, blue7, gray, gray2, gray3, violet, violet2, orange, orange2, black, white
+$c_val   : $red, $blue, $blue2, $blue3, $blue4, $blue5, $blue6, $blue7, $gray, $gray2, $gray3, $violet, $violet2, $orange, $orange2, $black, $white
+
+$i : '../images/'
+
+@mixin full-width
+	float: left
+	width: 100%
+	position: relative
+
+@mixin b($img, $position: center center, $color: '')
+	background: #{$color} url(#{$i}#{$img}) $position
+
++font-face('Proxima Nova', font-files('/layout/fonts/proximanova-reg-webfont.eot', '/layout/fonts/proximanova-reg-webfont.svg', '/layout/fonts/proximanova-reg-webfont.ttf', '/layout/fonts/proximanova-reg-webfont.woff'),'/layout/fonts/proximanova-reg-webfont.eot', 400,'normal')
++font-face('Proxima Nova', font-files('/layout/fonts/proximanova-bold-webfont.eot', '/layout/fonts/proximanova-bold-webfont.svg', '/layout/fonts/proximanova-bold-webfont.ttf', '/layout/fonts/proximanova-bold-webfont.woff'),'/layout/fonts/proximanova-bold-webfont.eot', 600,'normal')
++font-face('Proxima Nova', font-files('/layout/fonts/proximanova-xbold-webfont.eot', '/layout/fonts/proximanova-xbold-webfont.svg', '/layout/fonts/proximanova-xbold-webfont.ttf', '/layout/fonts/proximanova-xbold-webfont.woff'),'/layout/fonts/proximanova-xbold-webfont.eot', 700,'normal')
+
+html, body
+	min-height: 100%
+
+body
+	min-height: 100%
+	+full-width
+	font-family: 'Proxima Nova'
+	font-weight: 400
+	background: white
+	
+a, a span, a img, .social, .contacts
+	+transition-property(background, opacity, color, border, box-shadow, z-index, margin, height)
+	+transition-duration(.4s)
+	color: black
+	&:hover
+		text-decoration: none
+
+.container
+	width: 992px
+	margin: 0 auto
+	img
+		max-width: 100%
+#panel
+	position: absolute
+	width: 100%
+	top: 0
+#toolbar
+	top: 0
+	z-index: 2
+	position: fixed
+	+transition-property(background)
+	+transition-duration(.4s)
+	width: 100%
+	color: white
+	height: 95px
+	div
+		a.nav:last-child
+			margin-right: 0
+	.logo
+		+full-width
+		height: 73px
+		margin-top: 10px
+		text-align: center
+		img
+			height: 73px
+		background-size: contain
+		&:hover
+			img
+				opacity: .7
+	.row
+		.col-md-5:last-child
+			a.nav
+				margin-right: 0
+	.social
+		float: left
+		margin-top: 36px
+		a
+			float: left
+			width: 27px
+			height: 27px
+			+b('social.png', no-repeat)
+			&.fb
+				+transition-property(opacity)
+				+transition-duration(.4s)
+				background-position: 0px 0px
+				&:hover
+					opacity: 1
+					background-position: 0 -27px
+			&.tw
+				background-position: -20px 2px
+			&:hover
+				opacity: .7
+	.contacts
+		float: left
+		margin-right: 15px
+		text-align: center
+		line-height: 15px
+		margin-left: -10px
+		margin-top: 43px
+		a
+			font-size: 13px
+			text-transform: uppercase
+			color: white
+			font-weight: 600
+			&:first-child
+				margin-right: 15px
+			&:hover
+				opacity: .7
+	a.nav
+		color: white
+		text-transform: uppercase
+		font-weight: 700	
+		font-size: 15px
+		margin-top: 40px
+		float: left
+		margin-right: 24px
+		&:hover
+			opacity: .7
+		&.order
+			float: right
+			border-radius: 3px
+			border: 2px solid white
+			line-height: 24px
+			padding: 2px 10px 0
+			margin-top: 35px
+			margin-right: 0
+	&.fixed
+		background: rgba(0,0,0,1)
+		height: 70px
+		.logo
+			img
+				height: 50px
+		.contacts
+			margin-top: 28px
+		.social
+			margin-top: 21px
+		a.nav
+			margin-top: 25px
+			&.order
+				margin-top: 20px
+	&.inner
+		a
+			opacity: .5
+			&.logo, &.active, &:hover
+				opacity: 1
+		& + .block
+			padding-top: 110px
+a.big-button, .resp_slider .item .content a.button
+	font-size: 20px
+	text-transform: uppercase
+	font-weight: 700
+	border: 2px solid white
+	border-radius: 5px
+	color: white
+	line-height: 42px
+	display: inline-block
+	padding: 3px 20px 0
+	margin-bottom: 20px
+	background-color: transparent
+	&:hover
+		background: white
+		opacity: 1 !important
+		@for $i from 1 through length($c_val)
+			.#{nth($c_name, $i)} &
+				color: #{nth($c_val, $i)}
+
+	@for $i from 1 through length($c_val)
+		&.#{nth($c_name, $i)}
+			color: #{nth($c_val, $i)}
+			border-color: #{nth($c_val, $i)}
+			&:hover
+				background: #{nth($c_val, $i)}
+
+.color
+	@for $i from 1 through length($c_val)
+		&.#{nth($c_name, $i)}
+			color: #{nth($c_val, $i)} !important
+
+.bgcolor
+	@for $i from 1 through length($c_val)
+		&.#{nth($c_name, $i)}
+			background-color: #{nth($c_val, $i)}
+	a
+		color: white
+		&:hover
+			opacity: .7
+	
+#title
+	background-position: center center
+	background-repeat: no-repeat
+	background-size: cover
+	text-align: center
+	.content
+		vertical-align: middle
+		display: inline-block
+		line-height: 20px		
+
+.resp_slider
+	+full-width
+	font-family: 'Proxima Nova'
+	h1
+		font-family: 'Proxima Nova'
+	.item
+		.content
+			p
+				font-family: 'Times New Roman'
+				font-style: italic
+				font-size: 50px
+				margin-bottom: 0
+				opacity: 1
+
+			h1
+				font-size: 85px
+				line-height: 80px
+				font-weight: 700
+
+
+.block
+	+full-width
+	padding: 45px 0
+	p
+		color: white
+
+#services
+	+full-width
+	p
+		width: 95%
+		color: #b4b4c8
+		line-height: 17px
+		margin-bottom: 0px
+		font-size: 14px
+		+transition-property(background, opacity, color)
+		+transition-duration(.4s)
+	.item
+		margin-bottom: 60px
+		
+		&:hover
+			p
+				color: white
+		.title
+			text-align: center
+			display: inline-block
+			font-weight: 700
+			margin-bottom: 20px
+			font-size: 16px
+			+full-width
+			a
+				color: $blue2
+				text-transform: uppercase
+				&:hover
+					opacity: 1
+					color: $orange
+			.frame
+				height: 100px
+				display: inline-block
+
+#clients
+	.row
+		+full-width
+		margin-left: 0
+		margin-bottom: 40px
+		&:first-of-type
+			margin-top: -20px
+		&:last-of-type
+			margin-bottom: 50px
+
+.modal-backdrop.in
+	opacity: .8
+
+a.file
+	float: left
+	font-size: 16px
+	color: white
+	line-height: 33px
+	background: $blue2
+	padding: 3px 20px 0
+	&:hover
+		opacity: .5
+#Order
+	.modal-dialog
+		width: 885px
+	.modal-content
+		float: left
+		width: 100%
+		min-height: 240px
+		border-radius: 0
+		box-shadow: none
+		background: $gray3
+		padding: 10px 60px
+		h1.title
+			font-size: 50px
+		.row+.row
+			margin-top: 10px
+		#phone, #email
+			width: 120%
+		#email
+			float: right
+		label[for="email"]
+			margin-left: -40px
+		label
+			+full-width
+			line-height: 25px
+			padding: 7px 10px 0
+			font-size: 16px
+			text-transform: uppercase
+		input[type=text], textarea
+			+full-width
+			border: 2px solid #9EA6AF
+			line-height: 25px
+			padding: 3px 10px
+			font-size: 15px
+			&:focus
+				outline: 0
+				border-color: $blue2
+		.frame
+			+full-width
+		select
+			+full-width
+			border: 0
+			border-radius: 0
+			line-height: 28px
+			padding: 3px 10px
+			background: $blue2 url(/layout/images/arrow.png) 98% 13px no-repeat
+			appearance: button
+			-moz-appearance: button
+			-webkit-appearance: button
+			color: white
+			font-size: 16px
+			&:focus
+				outline: 0
+				border-color: $blue2
+
+#portfolio
+	+full-width
+	&.list
+		margin: 30px 0 60px
+		.item
+			width: 97.4%
+		span.over
+			width: 100%
+			text-align: center
+		.row+.row
+			padding-top: 6px
+		.row
+			div:nth-child(2)
+				.item
+					margin-left: 1.7%
+			div:last-child
+				.item
+					float: right
+	.frame
+		margin: 0 auto
+		margin-bottom: 50px
+		width: 90%
+		height: 240px
+		overflow: hidden
+		text-align: center
+		.item
+			margin-left: -3px
+	.item
+		display: inline-block
+		width: 240px
+		height: 240px
+		background-size: cover
+		background-position: center center
+		background-repeat: no-repeat
+		&:hover
+			opacity: 1
+			.over
+				opacity: 1
+		.over
+			background: rgba(0,0,0,.7)
+			width: 240px
+			height: 240px
+			float: left
+			line-height: 240px
+			opacity: 0
+			.text
+				line-height: 15px
+				display: inline-block
+				vertical-align: middle
+				color: white
+				text-align: center
+				.name
+					margin: 0 auto
+					display: inline-block
+					width: 75%
+					color: white
+					line-height: 20px
+					text-transform: uppercase
+					font-weight: 700
+					font-size: 14px
+					padding-bottom: 0px
+				.line
+					width: 50%
+					display: inline-block
+					border-bottom: 1px solid $blue2
+					height: 0
+					margin: -12px 0 0px
+				.type
+					+full-width
+					font-family: 'Times New Roman'
+					font-style: italic
+					color: white
+					margin-top: 5px
+					text-transform: lowercase
+
+#partners
+	.items
+		+full-width
+		margin-bottom: 20px
+		margin-top: -20px
+		text-align: center
+		height: 90px
+		line-height: 90px
+		overflow: hidden
+		img
+			display: inline-block
+			vertical-align: middle
+			margin: 0 8px 
+
+#contacts
+	.highlight
+		margin: -20px 0
+		padding: 0px
+
+.nav
+	text-align: center
+	a
+		text-transform: uppercase
+		font-weight: 700
+		font-size: 12px
+		margin-right: 20px
+		opacity: .6
+		&.active, &:hover
+			opacity: 1
+		&:last-child
+			margin-right: 0
+
+#map
+	height: 500px
+	padding: 0
+	margin: 0
+
+#footer
+	padding-top: 70px
+	p
+		color: #b4b4c8
+	.copyright
+		margin-top: 100px
+		a
+			color: #b4b4c8
+		p
+			margin-bottom: 25px
+			line-height: 16px
+
+.left
+	text-align: left
+.right
+	text-align: right
+.center
+	text-align: center
+.uppercase
+	text-transform: uppercase
+
+.small-top-padding
+	padding-top: 20px !important
+.small-bottom-padding
+	padding-bottom: 20px !important
+
+.small-top-margin
+	margin-top: 20px !important
+.small-bottom-margin
+	margin-bottom: 20px !important
+
+.no-bottom-padding
+	padding-bottom: 0 !important
+.no-top-padding
+	padding-top: 0 !important
+.no-bottom-margin
+	margin-bottom: 0 !important
+.no-top-margin
+	margin-top: 0 !important
+
+.highlight
+	+full-width
+	font-weight: 700
+	font-size: 30px
+	line-height: 36px
+	text-transform: uppercase
+	text-align: center
+	margin-bottom: 37px
+	&.small
+		font-size: 20px
+		margin-bottom: 27px
+		line-height: 25px
+
+.highlight2
+	font-size: 24px
+	line-height: 28px
+	+full-width
+	text-align: center
+	margin-bottom: 30px
+	&+&
+		margin-top: 20px
+
+h1, h2, h3
+	&.title
+		+full-width
+		text-align: center	
+		font-weight: 700
+		margin-bottom: 40px
+		& + .border-top
+			margin-top: -30px
+		.bgcolor &
+			color: white !important
+
+.border-bottom
+	+full-width
+	border-bottom: 1px solid rgba(0,0,0,.2)
+	.bgcolor &
+		border-bottom: 1px solid rgba(255,255,255,.3)
+.border-top
+	+full-width
+	border-top: 1px solid rgba(0,0,0,.2)
+	.bgcolor &
+		border-top: 1px solid rgba(255,255,255,.3)
+		
+
+h1.title + .highlight2
+	margin-top: -30px
+
+* + .title.border-top
+	padding-top: 35px
+
+h1.title
+	font-size: 70px
+	text-transform: uppercase
+	padding-bottom: 30px
+
+h2.title
+	font-weight: 700
+	font-size: 30px
+	text-transform: uppercase
+	padding-bottom: 30px
+	margin-bottom: 50px
+	&.big
+		font-size: 40px
+a
+	&.underline
+		text-decoration: underline
+h3.title
+	+full-width
+	padding-bottom: 40px
+	padding-top: 0
+	font-style: italic
+	font-family: 'Times New Roman'
+	font-size: 30px
+	font-weight: normal
+	color: black
+	&.big
+		font-size: 50px
+
+p
+	+full-width
+	font-size: 16px
+	margin-bottom: 40px
+	
+	.white &
+		color: $black
+
+span.description
+	font-size: 16px
+	font-family: 'Times New Roman'
+	font-style: italic
+	margin-top: 10px
+	display: inline-block
+
+.sections
+	+full-width
+	margin-bottom: 20px
+	a
+		font-weight: 700
+		text-transform: uppercase
+		line-height: 25px
+		border-radius: 4px
+		padding: 3px 10px 0
+		margin: -5px 10px
+		display: inline-block
+		border: 2px solid white
+		&:hover, &.active
+			color: $black
+			border: 2px solid $black
+
+
+
+
+
+
+
+
+
+
+
