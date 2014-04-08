@@ -730,9 +730,6 @@ a.file:hover {
   overflow: hidden;
   text-align: center;
 }
-#portfolio .frame .item {
-  margin-left: -3px;
-}
 #portfolio .item {
   display: inline-block;
   width: 240px;
