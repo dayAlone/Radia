@@ -69,6 +69,7 @@
 
     <?
         if($arResult['PROPERTIES']['PORTFOLIO']['VALUE']) {
+          
           $APPLICATION->IncludeComponent("bitrix:news.list", "portfolio_list", array(
             "IBLOCK_TYPE" => "content",
             "IBLOCK_ID" => "5",
