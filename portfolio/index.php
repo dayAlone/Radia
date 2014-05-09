@@ -1,5 +1,6 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
+$APPLICATION->SetTitle("");
 $list = true;
 if (CModule::IncludeModule("iblock") && isset($_REQUEST['CODE'])):
 	$arFilter = Array('IBLOCK_ID'=>5, 'CODE'=>$_REQUEST['CODE']);
@@ -22,76 +23,78 @@ if (CModule::IncludeModule("iblock") && isset($_REQUEST['CODE'])):
 	}
 endif;
 
-$APPLICATION->SetTitle("RADIA Interactive | Портфолио".($cat['NAME']?" | ".$cat['NAME']:"").($item['NAME']?" | ".$item['NAME']:""));
+$APPLICATION->SetTitle(($cat['NAME']?$cat['NAME']." | ":"").($item['NAME']?$item['NAME']." | ":"")."Портфолио  | RADIA Interactive");
 if($list) {
-?>
-
-	<div class="block white">
+?><div class="block white">
       <div class="container">
         <h1 class="title color black">
           портфолио
         </h1>
         <?
           	$APPLICATION->IncludeComponent("bitrix:news.list", "portfolio", array(
-				"IBLOCK_TYPE" => "content",
-				"IBLOCK_ID" => "5",
-				"NEWS_COUNT" => "18",
-				"SORT_BY1" => "ACTIVE_FROM",
-				"SORT_ORDER1" => "DESC",
-				"SORT_BY2" => "ACTIVE_FROM",
-				"SORT_ORDER2" => "DESC",
-				"FILTER_NAME" => "",
-				"FIELD_CODE" => array(
-					0 => "CODE",
-					1 => "NAME",
-					2 => "PREVIEW_TEXT",
-					3 => "PREVIEW_PICTURE",
-					4 => "DETAIL_URL",
-					5 => "",
-				),
-				"PROPERTY_CODE" => array(
-					0 => "SUBTITLE",
-					1 => "BUTTON",
-				),
-				"CHECK_DATES" => "Y",
-				"DETAIL_URL" => "/portfolio/#ELEMENT_CODE#/",
-				"AJAX_MODE" => "N",
-				"AJAX_OPTION_JUMP" => "N",
-				"AJAX_OPTION_STYLE" => "N",
-				"AJAX_OPTION_HISTORY" => "N",
-				"CACHE_TYPE" => "N",
-				"CACHE_TIME" => "3600",
-				"CACHE_FILTER" => "N",
-				"CACHE_GROUPS" => "N",
-				"PREVIEW_TRUNCATE_LEN" => "150",
-				"ACTIVE_DATE_FORMAT" => "d-m-Y",
-				"SET_TITLE" => "N",
-				"SET_STATUS_404" => "N",
-				"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
-				"ADD_SECTIONS_CHAIN" => "N",
-				"HIDE_LINK_WHEN_NO_DETAIL" => "N",
-				"PARENT_SECTION" => "",
-				"PARENT_SECTION_CODE" => $_REQUEST["CODE"],
-				"INCLUDE_SUBSECTIONS" => "Y",
-				"PAGER_TEMPLATE" => ".default",
-				"DISPLAY_TOP_PAGER" => "N",
-				"DISPLAY_BOTTOM_PAGER" => "Y",
-				"PAGER_TITLE" => "",
-				"PAGER_SHOW_ALWAYS" => "N",
-				"PAGER_DESC_NUMBERING" => "N",
-				"PAGER_DESC_NUMBERING_CACHE_TIME" => "3600",
-				"PAGER_SHOW_ALL" => "N",
-				"AJAX_OPTION_ADDITIONAL" => ""
-				),
-				false
-			);
+	"IBLOCK_TYPE" => "content",
+	"IBLOCK_ID" => "5",
+	"NEWS_COUNT" => "54",
+	"SORT_BY1" => "ACTIVE_FROM",
+	"SORT_ORDER1" => "DESC",
+	"SORT_BY2" => "ACTIVE_FROM",
+	"SORT_ORDER2" => "DESC",
+	"FILTER_NAME" => "",
+	"FIELD_CODE" => array(
+		0 => "CODE",
+		1 => "NAME",
+		2 => "PREVIEW_TEXT",
+		3 => "PREVIEW_PICTURE",
+		4 => "DETAIL_URL",
+		5 => "",
+	),
+	"PROPERTY_CODE" => array(
+		0 => "SUBTITLE",
+		1 => "BUTTON",
+		2 => "",
+	),
+	"CHECK_DATES" => "Y",
+	"DETAIL_URL" => "/portfolio/#ELEMENT_CODE#/",
+	"AJAX_MODE" => "N",
+	"AJAX_OPTION_JUMP" => "N",
+	"AJAX_OPTION_STYLE" => "N",
+	"AJAX_OPTION_HISTORY" => "N",
+	"CACHE_TYPE" => "N",
+	"CACHE_TIME" => "3600",
+	"CACHE_FILTER" => "N",
+	"CACHE_GROUPS" => "N",
+	"PREVIEW_TRUNCATE_LEN" => "150",
+	"ACTIVE_DATE_FORMAT" => "d-m-Y",
+	"SET_STATUS_404" => "N",
+	"SET_TITLE" => "N",
+	"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+	"ADD_SECTIONS_CHAIN" => "N",
+	"HIDE_LINK_WHEN_NO_DETAIL" => "N",
+	"PARENT_SECTION" => "",
+	"PARENT_SECTION_CODE" => $_REQUEST["CODE"],
+	"INCLUDE_SUBSECTIONS" => "Y",
+	"PAGER_TEMPLATE" => ".default",
+	"DISPLAY_TOP_PAGER" => "N",
+	"DISPLAY_BOTTOM_PAGER" => "Y",
+	"PAGER_TITLE" => "",
+	"PAGER_SHOW_ALWAYS" => "N",
+	"PAGER_DESC_NUMBERING" => "N",
+	"PAGER_DESC_NUMBERING_CACHE_TIME" => "3600",
+	"PAGER_SHOW_ALL" => "N",
+	"AJAX_OPTION_ADDITIONAL" => ""
+	),
+	false
+);
 		?>
         
       </div>
     </div>
 
 <?
-} else {?>
+} else {
+	$APPLICATION->SetDirProperty("phrase_title", "А можете сделать для меня лучше?");
+	$APPLICATION->SetDirProperty("phrase_button", "Готов сделать заявку");
+	?>
 
 	<?$APPLICATION->IncludeComponent("bitrix:news.detail", "portfolio", array(
 	"IBLOCK_TYPE" => "content",
@@ -123,7 +126,7 @@ if($list) {
 	"INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
 	"ADD_SECTIONS_CHAIN" => "Y",
 	"ACTIVE_DATE_FORMAT" => "d.m.Y",
-	"USE_PERMISSIONS" => "Y",
+	"USE_PERMISSIONS" => "N",
 	"GROUP_PERMISSIONS" => array(
 		0 => "1",
 	),

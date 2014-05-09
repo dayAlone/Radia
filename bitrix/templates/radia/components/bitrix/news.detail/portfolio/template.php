@@ -1,9 +1,49 @@
     <?if($arResult['DETAIL_PICTURE']['SRC']) {?>
-    <div id="title" class="red bgcolor" style="background-image: url(<?=$arResult['DETAIL_PICTURE']['SRC']?>)">
+    <?
+      $img = $arResult['DETAIL_PICTURE'];
+      $file = CFile::ResizeImageGet($img, array('width'=>450, 'height'=>450), BX_RESIZE_IMAGE_PROPORTIONAL, true);
+    ?>
+    <div id="title" class="white bgcolor" style="background-image: url(<?=$arResult['DETAIL_PICTURE']['SRC']?>), url(<?=$file['src']?>)">
       <div class="content">
         <h1 class="title no-bottom-margin no-bottom-padding"><?=$arResult['NAME']?></h1>
         <?if($arResult['PROPERTIES']['SUBTITLE']['VALUE']){?><h3 class="title big no-bottom-margin"><?=$arResult['PROPERTIES']['SUBTITLE']['VALUE']?></h3><?}?>
-        <a class="big-button <?if(!$arResult['PROPERTIES']['SUBTITLE']['VALUE']){?>small-top-margin<?}?>" href="#"><?=($arResult['PROPERTIES']['BUTTON']['VALUE']?$arResult['PROPERTIES']['BUTTON']['VALUE']:"Смотреть работу")?></a>
+        <br/><a class="big-button <?if(!$arResult['PROPERTIES']['SUBTITLE']['VALUE']){?>small-top-margin<?}?>" href="#"><?=($arResult['PROPERTIES']['BUTTON']['VALUE']?$arResult['PROPERTIES']['BUTTON']['VALUE']:"Смотреть работу")?></a>
+        <?if($arResult['PROPERTIES']['BUTTON_COLOR']['VALUE']) {?>
+          <style type="text/css">
+            <? if($arResult['PROPERTIES']['TITLE_COLOR']['VALUE']) {?>
+            #title h1 {
+              color: <?=$arResult['PROPERTIES']['TITLE_COLOR']['VALUE']?> !Important;;
+            }
+            <? } ?>
+            <? if($arResult['PROPERTIES']['SUBTITLE_COLOR']['VALUE']) {?>
+              #title h3 {
+                color: <?=$arResult['PROPERTIES']['SUBTITLE_COLOR']['VALUE']?> !Important;;
+              }
+            <? } ?>
+            <? if($arResult['PROPERTIES']['SUBTITLE_COLOR']['VALUE']) {?>
+              #title h3 {
+                color: <?=$arResult['PROPERTIES']['SUBTITLE_COLOR']['VALUE']?> !Important;;
+              }
+            <? } ?>
+            <? if($arResult['PROPERTIES']['BUTTON_COLOR']['VALUE']) {?>
+            #title .big-button {
+              color: <?=$arResult['PROPERTIES']['BUTTON_COLOR']['VALUE']?> !Important;
+              border-color: <?=$arResult['PROPERTIES']['BUTTON_COLOR']['VALUE']?> !Important;
+            }
+            <? } ?>
+            <? if($arResult['PROPERTIES']['BUTTON_HOVER_TEXT_COLOR']['VALUE']) {?>
+            #title .big-button:hover {
+              color: <?=$arResult['PROPERTIES']['BUTTON_HOVER_TEXT_COLOR']['VALUE']?> !Important;
+            }
+            <? } ?>
+            <? if($arResult['PROPERTIES']['BUTTON_HOVER_COLOR']['VALUE']) {?>
+            #title .big-button:hover {
+              background-color: <?=$arResult['PROPERTIES']['BUTTON_HOVER_COLOR']['VALUE']?> !Important;
+              border-color: <?=$arResult['PROPERTIES']['BUTTON_HOVER_COLOR']['VALUE']?> !Important;
+            }
+            <? } ?>
+          </style>
+        <?}?>
       </div>
     </div>
 

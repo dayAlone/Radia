@@ -10,15 +10,17 @@
 			<?if($props['BG_COLOR']['VALUE']){?>background-color: <?=$props['BG_COLOR']['VALUE']?>;<?}?>
 			<?if($props['BG_IMAGE']['VALUE']){?>background-image: url(<?=CFile::GetPath($props['BG_IMAGE']['VALUE'])?>);<?}?>
 		">
-		<?
-		if($props['BTN_EXTEND_COLOR']['VALUE_XML_ID']==1) {
-		?>
 		<style type="text/css">
 		.resp_slider .item.resp-slide-<?=$arItem['ID']?> .content .button {
-			background: <?=$props['BTN_COLOR']['VALUE']?>
+			border-color: <?=$props['BTN_COLOR']['VALUE']?>!important;
+			color: <?=$props['BTN_COLOR']['VALUE']?>!important;
+		}
+		.resp_slider .item.resp-slide-<?=$arItem['ID']?> .content .button:hover {
+			background-color: <?=$props['BTN_COLOR']['VALUE']?>!important;
+			color: <?=$props['BG_COLOR']['VALUE']?> !important;
 		}
 		</style>
-		<? } ?>
+		
 		<div class="content <?if($props["TXT_POSITION"]['VALUE_XML_ID']){?><?=$props["TXT_POSITION"]['VALUE_XML_ID']?><?}?>">
 			<?if($props["TXT_CONTENT"]['VALUE']){?>
 			
@@ -37,12 +39,7 @@
 
 						<a href="<?=($props["BTN_LINK"]['VALUE']?$props["BTN_LINK"]['VALUE']:"#")?>" class="button">
 							<?=($props["BTN_TEXT"]['VALUE']?$props["BTN_TEXT"]['VALUE']:"Узнать больше")?>
-						</a>	
-						<style type="text/css">
-							.resp-slide-<?=$arItem['ID']?> .content a.button:hover {
-								color: <?=$props['BG_COLOR']['VALUE']?>;
-							}
-						</style>
+						</a>
 					<?}?>
 
 				<?if($props["TXT_EFFECT"]['VALUE']){?></div><?}?>

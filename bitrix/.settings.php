@@ -1,5 +1,5 @@
 <?php
-return array (
+return array (
   'utf_mode' => 
   array (
     'value' => true,
@@ -46,8 +46,8 @@
         'className' => '\\Bitrix\\Main\\DB\\MysqlConnection',
         'host' => 'localhost',
         'database' => 'freshmate_radia',
-        'login' => 'root',
-        'password' => 'root',
+        'login' => 'freshmate_radia',
+        'password' => 'unce3Eviv',
         'options' => 2,
       ),
     ),

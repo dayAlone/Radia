@@ -49,7 +49,8 @@ $APPLICATION->SetAdditionalCSS("/bitrix/components/radia/resp_slider/layout/css/
 	<? } ?>
 	<? if($arParams["BUTTON_COLOR"]) {?>
 	.resp_slider .item .content .button {
-		background-color: <?=$arParams["BUTTON_COLOR"]?>;
+		border-color: <?=$arParams["BUTTON_COLOR"]?>;
+		color: <?=$arParams["BUTTON_COLOR"]?>;
 	}
 	<? } ?>
 </style>

@@ -50,7 +50,12 @@ a, a span, a img, .social, .contacts
 	color: black
 	&:hover
 		text-decoration: none
-
+#panel
+	a, span, img
+		-moz-transition: none
+		-webkit-transition: none
+		-o-transition: color 0 ease-in
+		transition: none
 .container
 	width: 992px
 	margin: 0 auto
@@ -173,6 +178,7 @@ a.big-button, .resp_slider .item .content a.button
 	padding: 3px 20px 0
 	margin-bottom: 20px
 	background-color: transparent
+
 	&:hover
 		background: white
 		opacity: 1 !important
@@ -186,7 +192,13 @@ a.big-button, .resp_slider .item .content a.button
 			border-color: #{nth($c_val, $i)}
 			&:hover
 				background: #{nth($c_val, $i)}
-
+.resp_slider.background--light .item .content a.button
+	background: transparent
+	border-color: black
+	color: black
+	&:hover
+		background: black
+		color: white
 .color
 	@for $i from 1 through length($c_val)
 		&.#{nth($c_name, $i)}
@@ -210,7 +222,12 @@ a.big-button, .resp_slider .item .content a.button
 		vertical-align: middle
 		display: inline-block
 		line-height: 20px		
-
+	h3
+		max-width: 980px
+		font-size: 40px
+		margin: 0 auto
+		float: none
+		display: inline-block
 .resp_slider
 	+full-width
 	font-family: 'Proxima Nova'
@@ -236,11 +253,29 @@ a.big-button, .resp_slider .item .content a.button
 	padding: 45px 0
 	p
 		color: white
+	ul
+		+full-width
+		li
+			color: white
+			+full-width
+			font-size: 16px
+			margin-bottom: 10px
+.underline
+	text-decoration: underline
+
+.big-title
+	font-weight: 700
+	margin-bottom: 15px
+	color: white
+	text-transform: uppercase
+	+full-width
+	font-size: 17px
 
 #services
 	+full-width
 	p
-		width: 95%
+		width: 90%
+		margin-left: 5%
 		color: #b4b4c8
 		line-height: 17px
 		margin-bottom: 0px
@@ -273,8 +308,12 @@ a.big-button, .resp_slider .item .content a.button
 #clients
 	.row
 		+full-width
+		height: 100px
+		line-height: 100px
 		margin-left: 0
 		margin-bottom: 40px
+		img
+			vertical-align: middle
 		&:first-of-type
 			margin-top: -20px
 		&:last-of-type
@@ -368,7 +407,7 @@ a.file
 		margin: 0 auto
 		margin-bottom: 50px
 		width: 90%
-		height: 240px
+		height: 320px
 		overflow: hidden
 		text-align: center
 		.item
@@ -376,7 +415,7 @@ a.file
 	.item
 		display: inline-block
 		width: 240px
-		height: 240px
+		height: 320px
 		background-size: cover
 		background-position: center center
 		background-repeat: no-repeat
@@ -387,9 +426,9 @@ a.file
 		.over
 			background: rgba(0,0,0,.7)
 			width: 240px
-			height: 240px
+			height: 320px
 			float: left
-			line-height: 240px
+			line-height: 320px
 			opacity: 0
 			.text
 				line-height: 15px
@@ -550,9 +589,9 @@ h1.title + .highlight2
 	padding-top: 35px
 
 h1.title
-	font-size: 70px
+	font-size: 65px
 	text-transform: uppercase
-	padding-bottom: 30px
+	padding-bottom: 20px
 
 h2.title
 	font-weight: 700

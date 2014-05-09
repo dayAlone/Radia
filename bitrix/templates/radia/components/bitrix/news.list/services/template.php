@@ -15,7 +15,7 @@ foreach($arResult["ITEMS"] as $arItem):
 	      <?=$arItem['NAME']?>
 	    </a></div>
 	    <p>
-	      <?=$arItem['PREVIEW_TEXT']?>
+	      <?=$arItem['~PREVIEW_TEXT']?>
 	    </p>
 	  </div>
 <?

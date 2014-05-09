@@ -51,6 +51,13 @@ a:hover, a span:hover, a img:hover, .social:hover, .contacts:hover {
   text-decoration: none;
 }
 
+#panel a, #panel span, #panel img {
+  -moz-transition: none;
+  -webkit-transition: none;
+  -o-transition: color 0 ease-in;
+  transition: none;
+}
+
 .container {
   width: 992px;
   margin: 0 auto;
@@ -391,6 +398,16 @@ a.big-button.white:hover, .resp_slider .item .content a.button.white:hover {
   background: white;
 }
 
+.resp_slider.background--light .item .content a.button {
+  background: transparent;
+  border-color: black;
+  color: black;
+}
+.resp_slider.background--light .item .content a.button:hover {
+  background: black;
+  color: white;
+}
+
 .color.red {
   color: #cb0019 !important;
 }
@@ -512,6 +529,13 @@ a.big-button.white:hover, .resp_slider .item .content a.button.white:hover {
   display: inline-block;
   line-height: 20px;
 }
+#title h3 {
+  max-width: 980px;
+  font-size: 40px;
+  margin: 0 auto;
+  float: none;
+  display: inline-block;
+}
 
 .resp_slider {
   float: left;
@@ -544,6 +568,34 @@ a.big-button.white:hover, .resp_slider .item .content a.button.white:hover {
 .block p {
   color: white;
 }
+.block ul {
+  float: left;
+  width: 100%;
+  position: relative;
+}
+.block ul li {
+  color: white;
+  float: left;
+  width: 100%;
+  position: relative;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.big-title {
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: white;
+  text-transform: uppercase;
+  float: left;
+  width: 100%;
+  position: relative;
+  font-size: 17px;
+}
 
 #services {
   float: left;
@@ -551,7 +603,8 @@ a.big-button.white:hover, .resp_slider .item .content a.button.white:hover {
   position: relative;
 }
 #services p {
-  width: 95%;
+  width: 90%;
+  margin-left: 5%;
   color: #b4b4c8;
   line-height: 17px;
   margin-bottom: 0px;
@@ -598,8 +651,13 @@ a.big-button.white:hover, .resp_slider .item .content a.button.white:hover {
   float: left;
   width: 100%;
   position: relative;
+  height: 100px;
+  line-height: 100px;
   margin-left: 0;
   margin-bottom: 40px;
+}
+#clients .row img {
+  vertical-align: middle;
 }
 #clients .row:first-of-type {
   margin-top: -20px;
@@ -726,14 +784,14 @@ a.file:hover {
   margin: 0 auto;
   margin-bottom: 50px;
   width: 90%;
-  height: 240px;
+  height: 320px;
   overflow: hidden;
   text-align: center;
 }
 #portfolio .item {
   display: inline-block;
   width: 240px;
-  height: 240px;
+  height: 320px;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -747,9 +805,9 @@ a.file:hover {
 #portfolio .item .over {
   background: rgba(0, 0, 0, 0.7);
   width: 240px;
-  height: 240px;
+  height: 320px;
   float: left;
-  line-height: 240px;
+  line-height: 320px;
   opacity: 0;
 }
 #portfolio .item .over .text {
@@ -972,9 +1030,9 @@ h1.title + .highlight2 {
 }
 
 h1.title {
-  font-size: 70px;
+  font-size: 65px;
   text-transform: uppercase;
-  padding-bottom: 30px;
+  padding-bottom: 20px;
 }
 
 h2.title {
