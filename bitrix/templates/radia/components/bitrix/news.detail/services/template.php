@@ -120,7 +120,6 @@
             "PAGER_SHOW_ALL" => "N",
             "AJAX_OPTION_ADDITIONAL" => ""
             ),
-            false
-          );
+            false);
         }
       ?>    
