@@ -50,7 +50,7 @@
             );?>
             <!--<a class="nav" href="#">блог</a>-->
           </div>
-          <div class="col-md-2">
+          <div class="col-md-2 center">
             <a href="/" class="logo">
               <svg width="108px" height="108px" viewBox="0 0 108 108" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                   <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">

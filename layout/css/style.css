@@ -33,6 +33,7 @@ body {
   position: relative;
   font-family: "Proxima Nova";
   font-weight: 400;
+  font-size: 14px;
   background: white;
 }
 
@@ -580,7 +581,6 @@ a.big-button.white:hover, .resp_slider .item .content a.button.white:hover {
 }
 .block p {
   color: #222326;
-  font-size: 14px;
 }
 .block ul {
   float: left;
@@ -603,7 +603,7 @@ a.big-button.white:hover, .resp_slider .item .content a.button.white:hover {
 .big-title {
   font-weight: 700;
   margin-bottom: 15px;
-  color: white;
+  color: #222326;
   text-transform: uppercase;
   float: left;
   width: 100%;
