@@ -220,7 +220,7 @@ a:hover, a span:hover, a img:hover, .social:hover, .contacts:hover {
 }
 #toolbar.inner a.logo, #toolbar.inner a.active, #toolbar.inner a:hover {
   opacity: 1;
-  color: #6c7f8c;
+  color: black;
 }
 #toolbar.inner + .block {
   padding-top: 110px;
