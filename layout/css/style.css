@@ -99,11 +99,12 @@ a:hover, a span:hover, a img:hover, .social:hover, .contacts:hover {
   position: relative;
   height: 73px;
   margin-top: 10px;
-  text-align: left;
+  text-align: center;
   background-size: contain;
 }
 #toolbar .logo svg {
   height: 73px;
+  display: inline-block;
 }
 #toolbar .logo svg path {
   -webkit-transition-property: all;
