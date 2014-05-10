@@ -1,6 +1,6 @@
     <div class="block bgcolor blue6 no-bottom-padding" <?=($arResult['PROPERTIES']['BG_TITLE']['VALUE']?"style='background-color:".$arResult['PROPERTIES']['BG_TITLE']['VALUE']."'":"")?>>
       <div class="container">
-        <h1 class="title orange no-bottom-margin">
+        <h1 class="title orange no-bottom-margin" <?=($arResult['PROPERTIES']['COLOR_TITLE']['VALUE']?"style='background-color:".$arResult['PROPERTIES']['COLOR_TITLE']['VALUE']."'":"")?>>
           <?=$arResult['NAME']?>
         </h1>
       </div>

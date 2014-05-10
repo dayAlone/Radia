@@ -214,11 +214,7 @@ a:hover, a span:hover, a img:hover, .social:hover, .contacts:hover {
 #toolbar.fixed a.nav.order:hover {
   border-color: black;
 }
-#toolbar.inner a {
-  opacity: 0.5;
-}
 #toolbar.inner a.logo, #toolbar.inner a.active, #toolbar.inner a:hover {
-  opacity: 1;
   color: black;
 }
 #toolbar.inner + .block {
