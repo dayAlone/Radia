@@ -141,7 +141,7 @@ a:hover, a span:hover, a img:hover, .social:hover, .contacts:hover {
   margin-right: 15px;
   text-align: center;
   line-height: 15px;
-  margin-left: -10px;
+  margin-left: 20px;
   margin-top: 43px;
 }
 #toolbar .contacts a {
