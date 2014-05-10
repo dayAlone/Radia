@@ -72,6 +72,7 @@ a, a span, a img, .social, .contacts
 	+transition-property(background)
 	+transition-duration(.4s)
 	width: 100%
+	overflow: hidden
 	color: white
 	height: 95px
 	div
@@ -81,12 +82,15 @@ a, a span, a img, .social, .contacts
 		+full-width
 		height: 73px
 		margin-top: 10px
-		text-align: center
-		img
+		text-align: left
+		svg
 			height: 73px
+			path
+				+transition-property(all)
+				+transition-duration(.4s)
 		background-size: contain
 		&:hover
-			img
+			svg
 				opacity: .7
 	.row
 		.col-md-5:last-child
@@ -99,16 +103,8 @@ a, a span, a img, .social, .contacts
 			float: left
 			width: 27px
 			height: 27px
-			+b('social.png', no-repeat)
-			&.fb
-				+transition-property(opacity)
-				+transition-duration(.4s)
-				background-position: 0px 0px
-				&:hover
-					opacity: 1
-					background-position: 0 -27px
-			&.tw
-				background-position: -20px 2px
+			svg
+				height: 27px
 			&:hover
 				opacity: .7
 	.contacts
@@ -122,7 +118,7 @@ a, a span, a img, .social, .contacts
 			font-size: 13px
 			text-transform: uppercase
 			color: white
-			font-weight: 600
+			font-weight: 500
 			&:first-child
 				margin-right: 15px
 			&:hover
@@ -130,11 +126,13 @@ a, a span, a img, .social, .contacts
 	a.nav
 		color: white
 		text-transform: uppercase
-		font-weight: 700	
+		font-weight: 600	
 		font-size: 15px
 		margin-top: 40px
 		float: left
 		margin-right: 24px
+		&:first-child
+			margin-left: -40px
 		&:hover
 			opacity: .7
 		&.order
@@ -146,24 +144,38 @@ a, a span, a img, .social, .contacts
 			margin-top: 35px
 			margin-right: 0
 	&.fixed
-		background: rgba(0,0,0,1)
-		height: 70px
+		background: white
+		height: 55px
 		.logo
-			img
-				height: 50px
+			svg
+				height: 38px
+				path
+					fill: #8f9ea2
 		.contacts
-			margin-top: 28px
-		.social
 			margin-top: 21px
+			a
+				color: #6c7f8c
+		.social
+			margin-top: 13px
+			svg
+				path
+					fill: #a8b5b9
 		a.nav
-			margin-top: 25px
+			margin-top: 18px
+			color: #8f9ea2
+			&:hover
+				color: black
 			&.order
-				margin-top: 20px
+				margin-top: 13px
+				border-color: #8f9ea2
+				&:hover
+					border-color: black
 	&.inner
 		a
 			opacity: .5
 			&.logo, &.active, &:hover
 				opacity: 1
+				color: #6c7f8c
 		& + .block
 			padding-top: 110px
 a.big-button, .resp_slider .item .content a.button

@@ -26,6 +26,7 @@ $APPLICATION->SetTitle($arFields['NAME']." | Услуги | RADIA Interactive");
 					0 => "BG_TITLE",
 					1 => "BG_NAV",
 					2 => "PORTFOLIO"
+					1 => "COLOR_TITLE",
 		),
 		"IBLOCK_URL"                => "/services/#ELEMENT_CODE#/",
 		"AJAX_MODE"                 => "N",

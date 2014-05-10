@@ -85,6 +85,7 @@ a:hover, a span:hover, a img:hover, .social:hover, .contacts:hover {
   -o-transition-duration: 0.4s;
   transition-duration: 0.4s;
   width: 100%;
+  overflow: hidden;
   color: white;
   height: 95px;
 }
@@ -97,13 +98,23 @@ a:hover, a span:hover, a img:hover, .social:hover, .contacts:hover {
   position: relative;
   height: 73px;
   margin-top: 10px;
-  text-align: center;
+  text-align: left;
   background-size: contain;
 }
-#toolbar .logo img {
+#toolbar .logo svg {
   height: 73px;
 }
-#toolbar .logo:hover img {
+#toolbar .logo svg path {
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.4s;
+  -moz-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+#toolbar .logo:hover svg {
   opacity: 0.7;
 }
 #toolbar .row .col-md-5:last-child a.nav {
@@ -117,25 +128,9 @@ a:hover, a span:hover, a img:hover, .social:hover, .contacts:hover {
   float: left;
   width: 27px;
   height: 27px;
-  background:  url(../images/social.png) no-repeat;
 }
-#toolbar .social a.fb {
-  -webkit-transition-property: opacity;
-  -moz-transition-property: opacity;
-  -o-transition-property: opacity;
-  transition-property: opacity;
-  -webkit-transition-duration: 0.4s;
-  -moz-transition-duration: 0.4s;
-  -o-transition-duration: 0.4s;
-  transition-duration: 0.4s;
-  background-position: 0px 0px;
-}
-#toolbar .social a.fb:hover {
-  opacity: 1;
-  background-position: 0 -27px;
-}
-#toolbar .social a.tw {
-  background-position: -20px 2px;
+#toolbar .social a svg {
+  height: 27px;
 }
 #toolbar .social a:hover {
   opacity: 0.7;
@@ -152,7 +147,7 @@ a:hover, a span:hover, a img:hover, .social:hover, .contacts:hover {
   font-size: 13px;
   text-transform: uppercase;
   color: white;
-  font-weight: 600;
+  font-weight: 500;
 }
 #toolbar .contacts a:first-child {
   margin-right: 15px;
@@ -163,11 +158,14 @@ a:hover, a span:hover, a img:hover, .social:hover, .contacts:hover {
 #toolbar a.nav {
   color: white;
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 15px;
   margin-top: 40px;
   float: left;
   margin-right: 24px;
+}
+#toolbar a.nav:first-child {
+  margin-left: -40px;
 }
 #toolbar a.nav:hover {
   opacity: 0.7;
@@ -182,29 +180,47 @@ a:hover, a span:hover, a img:hover, .social:hover, .contacts:hover {
   margin-right: 0;
 }
 #toolbar.fixed {
-  background: black;
-  height: 70px;
+  background: white;
+  height: 55px;
 }
-#toolbar.fixed .logo img {
-  height: 50px;
+#toolbar.fixed .logo svg {
+  height: 38px;
+}
+#toolbar.fixed .logo svg path {
+  fill: #8f9ea2;
 }
 #toolbar.fixed .contacts {
-  margin-top: 28px;
-}
-#toolbar.fixed .social {
   margin-top: 21px;
 }
+#toolbar.fixed .contacts a {
+  color: #6c7f8c;
+}
+#toolbar.fixed .social {
+  margin-top: 13px;
+}
+#toolbar.fixed .social svg path {
+  fill: #a8b5b9;
+}
 #toolbar.fixed a.nav {
-  margin-top: 25px;
+  margin-top: 18px;
+  color: #8f9ea2;
+}
+#toolbar.fixed a.nav:hover {
+  color: black;
 }
 #toolbar.fixed a.nav.order {
-  margin-top: 20px;
+  margin-top: 13px;
+  border-color: #8f9ea2;
+}
+#toolbar.fixed a.nav.order:hover {
+  border-color: black;
 }
 #toolbar.inner a {
   opacity: 0.5;
 }
 #toolbar.inner a.logo, #toolbar.inner a.active, #toolbar.inner a:hover {
   opacity: 1;
+  color: #6c7f8c;
 }
 #toolbar.inner + .block {
   padding-top: 110px;
