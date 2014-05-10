@@ -33,7 +33,6 @@
           endforeach;?>
           </div>
         </div>
-        <? endif;?>
-      
       </div>
     </div>
+    <? endif;?>
