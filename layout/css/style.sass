@@ -335,15 +335,24 @@ a.big-button, .resp_slider .item .content a.button
 .modal-backdrop.in
 	opacity: .8
 
-a.file
+a.file, #Order input[type=submit]
 	float: left
 	font-size: 16px
+	border: 0
 	color: white
 	line-height: 33px
 	background: $blue2
-	padding: 3px 20px 0
+	padding: 2px 20px 0
 	&:hover
 		opacity: .5
+.filename
+	line-height: 33px
+	padding: 2px 20px 0
+	display: inline-block
+.parsley-error
+	border: 2px solid #f64531 !important
+.parsley-errors-list
+	display: none !important
 #Order
 	.modal-dialog
 		width: 885px
@@ -352,34 +361,64 @@ a.file
 		width: 100%
 		min-height: 240px
 		border-radius: 0
+		margin-bottom: 30px
 		box-shadow: none
 		background: $gray3
-		padding: 10px 60px
+		padding: 10px 60px 35px
 		h1.title
 			font-size: 50px
+			margin-bottom: 0
+			color: #00b8cd
 		.row+.row
 			margin-top: 10px
 		#phone, #email
 			width: 120%
 		#email
 			float: right
-		label[for="email"]
-			margin-left: -40px
+		h4
+			text-transform: uppercase
+			line-height: 26px
+			font-weight: 600
 		label
 			+full-width
 			line-height: 25px
 			padding: 7px 10px 0
 			font-size: 16px
 			text-transform: uppercase
-		input[type=text], textarea
+		input[type=email], input[type=text], textarea
 			+full-width
 			border: 2px solid #9EA6AF
 			line-height: 25px
 			padding: 3px 10px
 			font-size: 15px
+			max-width: 100%
 			&:focus
 				outline: 0
 				border-color: $blue2
+		label+.text
+			margin-top: 20px
+		.text
+			margin-left: 10px
+			font-size: 14px
+			float: left
+			line-height: 15px
+			width: 83%
+			float: left
+		.row.last
+			margin-top: 30px
+		input[name=captcha_word], input[type=submit]
+			height: 44px
+		input[type=submit]
+			float: right
+			text-transform: uppercase
+			font-weight: 600
+			width: 95%
+			background: #f64531
+			&:hover
+				+box-shadow(2px 2px 0 0 rgba(177,32,20,.5))
+				opacity: 1
+		.captcha_img
+			border: 2px solid #9EA6AF
 		.frame
 			+full-width
 		select

@@ -684,16 +684,31 @@ a.big-button.white:hover, .resp_slider .item .content a.button.white:hover {
   opacity: 0.8;
 }
 
-a.file {
+a.file, #Order input[type=submit] {
   float: left;
   font-size: 16px;
+  border: 0;
   color: white;
   line-height: 33px;
   background: #00bbd1;
-  padding: 3px 20px 0;
+  padding: 2px 20px 0;
 }
-a.file:hover {
+a.file:hover, #Order input[type=submit]:hover {
   opacity: 0.5;
+}
+
+.filename {
+  line-height: 33px;
+  padding: 2px 20px 0;
+  display: inline-block;
+}
+
+.parsley-error {
+  border: 2px solid #f64531 !important;
+}
+
+.parsley-errors-list {
+  display: none !important;
 }
 
 #Order .modal-dialog {
@@ -704,12 +719,15 @@ a.file:hover {
   width: 100%;
   min-height: 240px;
   border-radius: 0;
+  margin-bottom: 30px;
   box-shadow: none;
   background: #dde3e8;
-  padding: 10px 60px;
+  padding: 10px 60px 35px;
 }
 #Order .modal-content h1.title {
   font-size: 50px;
+  margin-bottom: 0;
+  color: #00b8cd;
 }
 #Order .modal-content .row + .row {
   margin-top: 10px;
@@ -720,8 +738,10 @@ a.file:hover {
 #Order .modal-content #email {
   float: right;
 }
-#Order .modal-content label[for="email"] {
-  margin-left: -40px;
+#Order .modal-content h4 {
+  text-transform: uppercase;
+  line-height: 26px;
+  font-weight: 600;
 }
 #Order .modal-content label {
   float: left;
@@ -732,7 +752,7 @@ a.file:hover {
   font-size: 16px;
   text-transform: uppercase;
 }
-#Order .modal-content input[type=text], #Order .modal-content textarea {
+#Order .modal-content input[type=email], #Order .modal-content input[type=text], #Order .modal-content textarea {
   float: left;
   width: 100%;
   position: relative;
@@ -740,10 +760,44 @@ a.file:hover {
   line-height: 25px;
   padding: 3px 10px;
   font-size: 15px;
+  max-width: 100%;
 }
-#Order .modal-content input[type=text]:focus, #Order .modal-content textarea:focus {
+#Order .modal-content input[type=email]:focus, #Order .modal-content input[type=text]:focus, #Order .modal-content textarea:focus {
   outline: 0;
   border-color: #00bbd1;
+}
+#Order .modal-content label + .text {
+  margin-top: 20px;
+}
+#Order .modal-content .text {
+  margin-left: 10px;
+  font-size: 14px;
+  float: left;
+  line-height: 15px;
+  width: 83%;
+  float: left;
+}
+#Order .modal-content .row.last {
+  margin-top: 30px;
+}
+#Order .modal-content input[name=captcha_word], #Order .modal-content input[type=submit] {
+  height: 44px;
+}
+#Order .modal-content input[type=submit] {
+  float: right;
+  text-transform: uppercase;
+  font-weight: 600;
+  width: 95%;
+  background: #f64531;
+}
+#Order .modal-content input[type=submit]:hover {
+  -webkit-box-shadow: 2px 2px 0 0 rgba(177, 32, 20, 0.5);
+  -moz-box-shadow: 2px 2px 0 0 rgba(177, 32, 20, 0.5);
+  box-shadow: 2px 2px 0 0 rgba(177, 32, 20, 0.5);
+  opacity: 1;
+}
+#Order .modal-content .captcha_img {
+  border: 2px solid #9ea6af;
 }
 #Order .modal-content .frame {
   float: left;

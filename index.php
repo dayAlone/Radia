@@ -158,7 +158,7 @@ catch(e) { }
       </div>
     </div>
 
-    <div id="portfolio" class="block bgcolor blue2">
+    <div id="portfolio" class="block bgcolor">
       <div class="container">
         <h3 class="title border-bottom">
           А еще мы покажем вам, что делали
