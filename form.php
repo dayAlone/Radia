@@ -69,7 +69,7 @@ if($result['status'] == 'ok') {
 		____________________________________________________________<br />
 		";
 
-		$subject = "Заявка с сайта:".$_REQUEST["theme"]; 
+		$subject = "Заявка с сайта: ".$_REQUEST["theme"]; 
 		$subject = '=?UTF-8?B?'.base64_encode($subject).'?=';
 
 		if ($result['status'] == 'ok') {
