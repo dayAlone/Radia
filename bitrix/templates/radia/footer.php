@@ -126,7 +126,7 @@
                   <label for="type">вообще, это сайт*</label>
                 </div>
                 <div class="col-md-9">
-                  <select name="theme" id="theme" required>
+                  <select name="type" required>
                     <option value="">Тут нужно что-нибудь выбрать</option>
                     <option value="Сайт-визитка">
                       Сайт-визитка

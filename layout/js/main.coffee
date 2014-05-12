@@ -46,6 +46,7 @@ $(document).ready ->
 		if($(this).parsley().isValid() && $('#name').val().length>0)
 			data = new FormData(this)
 			form = $(this)
+			data.prepend('theme',$('#theme').val())
 			data.prepend('name',$('#name').val())
 			data.prepend('group_id',5)
 			$.ajax
@@ -57,7 +58,6 @@ $(document).ready ->
 				processData: false,
 				mimeType:    'multipart/form-data',
 				success: (data)->
-					console.log(data);
 					data = JSON.parse(data)
 					if(data.status=='error')
 						getCaptcha()
