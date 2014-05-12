@@ -37,13 +37,13 @@ if($result['status'] == 'ok') {
 		<br />
 		";
 		foreach ($_REQUEST as $key => $value)
-			if($text[$key])
+			if(strlen($text[$key])>0)
 				$body .= $text[$key].': '.$value."<br /><br />\r\n";
 
 		foreach ($_FILES as $key => $value){
 			if($text[$key]) {
 				$value = CFile::GetPath(CFile::SaveFile($value));
-				$body .=$text[$key].': <a href="'.$value.'">'.$value."</a><br /><br />\r\n";
+				$body .=$text[$key].': <a href="http://radia.ru'.$value.'">'.$value."</a><br /><br />\r\n";
 			}
 		}
 
