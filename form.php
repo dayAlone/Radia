@@ -40,7 +40,7 @@ if($result['status'] == 'ok') {
 			if($text[$key])
 				$body .= $text[$key].': '.$value."<br /><br />\r\n";
 
-		foreach ($_FILE as $key => $value){
+		foreach ($_FILES as $key => $value){
 			if($text[$key]) {
 				$value = CFile::GetPath(CFile::SaveFile($value));
 				$body .=$text[$key].': <a href="'.$value.'">'.$value."</a><br /><br />\r\n";

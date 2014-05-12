@@ -46,8 +46,8 @@ $(document).ready ->
 		if($(this).parsley().isValid() && $('#name').val().length>0)
 			data = new FormData(this)
 			form = $(this)
-			data.append('name',$('#name').val())
-			data.append('group_id',5)
+			data.prepend('name',$('#name').val())
+			data.prepend('group_id',5)
 			$.ajax
 				type:        'POST',
 				url:         '/form.php',
