@@ -37,7 +37,7 @@ if($result['status'] == 'ok') {
 		<br />
 		";
 		foreach ($_REQUEST as $key => $value)
-			if(strlen($text[$key])>0)
+			if($text[$key]&&strlen($value)>0)
 				$body .= $text[$key].': '.$value."<br /><br />\r\n";
 
 		foreach ($_FILES as $key => $value){
