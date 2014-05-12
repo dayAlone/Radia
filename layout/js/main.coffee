@@ -31,15 +31,17 @@ $(document).ready ->
 		$(this).parent().find('input[type=file]').trigger('click')
 
 	$('#theme').on 'change', ()->
-		
 		$('#Order form').addClass('hidden')
 		id = $('#theme option:selected').data('form')
 		$('#Order form.'+id).removeClass('hidden')
+
 	$('input[name=phone]').mask('+7 999 999 99 99')
+
 	$('#Order form input[type=submit]').click (e)->
 		$('#name').removeClass('parsley-error')
 		if($('#name').val().length==0)
 			$('#name').addClass('parsley-error')
+	
 	$('#Order form').submit (e)->
 		e.preventDefault()
 		$('#name, input[name=captcha_word]').removeClass('parsley-error')
@@ -70,6 +72,11 @@ $(document).ready ->
 		else
 			$('#name').addClass('parsley-error')
 			
+	$('#Order').on 'hidden.bs.modal', ()->
+		$('#Order form').each ()->
+			$(this).trigger('reset').addClass('hidden')
+		$('#theme, #name').val('')
+		getCaptcha()
 
 
 	$('input[type=file]').on 'change', ()->

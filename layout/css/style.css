@@ -1,5 +1,13 @@
 @font-face {
   font-family: "Proxima Nova";
+  src: url(/layout/fonts/ProximaNova-Light.eot);
+  src: url(/layout/fonts/ProximaNova-Light.eot?#iefix) format('eot'), url(/layout/fonts/ProximaNova-Light.eot) format('embedded-opentype'), url(/layout/fonts/ProximaNova-Light.svg) format('svg'), url(/layout/fonts/ProximaNova-Light.ttf) format('truetype'), url(/layout/fonts/ProximaNova-Light.woff) format('woff');
+  font-weight: 300;
+  font-style: "normal";
+}
+
+@font-face {
+  font-family: "Proxima Nova";
   src: url(/layout/fonts/proximanova-reg-webfont.eot);
   src: url(/layout/fonts/proximanova-reg-webfont.eot?#iefix) format('eot'), url(/layout/fonts/proximanova-reg-webfont.eot) format('embedded-opentype'), url(/layout/fonts/proximanova-reg-webfont.svg) format('svg'), url(/layout/fonts/proximanova-reg-webfont.ttf) format('truetype'), url(/layout/fonts/proximanova-reg-webfont.woff) format('woff');
   font-weight: 400;
@@ -172,7 +180,7 @@ a:hover, a span:hover, a img:hover, .social:hover, .contacts:hover {
 #toolbar a.nav.order {
   float: right;
   border-radius: 3px;
-  border: 2px solid white;
+  border: 1px solid white;
   line-height: 24px;
   padding: 2px 10px 0;
   margin-top: 35px;
@@ -222,10 +230,10 @@ a:hover, a span:hover, a img:hover, .social:hover, .contacts:hover {
 }
 
 a.big-button, .resp_slider .item .content a.button {
-  font-size: 20px;
+  font-size: 15px;
   text-transform: uppercase;
-  font-weight: 700;
-  border: 2px solid white;
+  font-weight: 600;
+  border: 1px solid white;
   border-radius: 5px;
   color: white;
   line-height: 42px;
@@ -288,6 +296,9 @@ a.big-button:hover, .resp_slider .item .content a.button:hover {
 }
 .white a.big-button:hover, .white .resp_slider .item .content a.button:hover {
   color: white;
+}
+.gray4 a.big-button:hover, .gray4 .resp_slider .item .content a.button:hover {
+  color: #dfeaec;
 }
 a.big-button.red, .resp_slider .item .content a.button.red {
   color: #cb0019;
@@ -408,6 +419,13 @@ a.big-button.white, .resp_slider .item .content a.button.white {
 a.big-button.white:hover, .resp_slider .item .content a.button.white:hover {
   background: white;
 }
+a.big-button.gray4, .resp_slider .item .content a.button.gray4 {
+  color: #dfeaec;
+  border-color: #dfeaec;
+}
+a.big-button.gray4:hover, .resp_slider .item .content a.button.gray4:hover {
+  background: #dfeaec;
+}
 
 .resp_slider.background--light .item .content a.button {
   background: transparent;
@@ -470,6 +488,9 @@ a.big-button.white:hover, .resp_slider .item .content a.button.white:hover {
 .color.white {
   color: white !important;
 }
+.color.gray4 {
+  color: #dfeaec !important;
+}
 
 .bgcolor.red {
   background-color: #cb0019;
@@ -522,6 +543,9 @@ a.big-button.white:hover, .resp_slider .item .content a.button.white:hover {
 .bgcolor.white {
   background-color: white;
 }
+.bgcolor.gray4 {
+  background-color: #dfeaec;
+}
 .bgcolor a {
   color: white;
 }
@@ -530,6 +554,18 @@ a.big-button.white:hover, .resp_slider .item .content a.button.white:hover {
 }
 .bgcolor.block p {
   color: white;
+}
+.bgcolor.bright .border-bottom, .bgcolor.bright a.big-button {
+  border-color: #2f3748;
+}
+.bgcolor.bright .border-bottom:hover, .bgcolor.bright a.big-button:hover {
+  background: #2f3748;
+}
+.bgcolor.bright a, .bgcolor.bright p, .bgcolor.bright h1, .bgcolor.bright h2 {
+  color: #2f3748;
+}
+.bgcolor.bright h3.title {
+  color: #858b96 !important;
 }
 
 #title {
@@ -1028,7 +1064,7 @@ a.file:hover, #Order input[type=submit]:hover {
   float: left;
   width: 100%;
   position: relative;
-  font-weight: 700;
+  font-weight: 300;
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
@@ -1123,11 +1159,11 @@ h3.title {
   float: left;
   width: 100%;
   position: relative;
-  padding-bottom: 40px;
+  padding-bottom: 20px;
   padding-top: 0;
   font-style: italic;
   font-family: "Times New Roman";
-  font-size: 30px;
+  font-size: 20px;
   font-weight: normal;
   color: black;
 }

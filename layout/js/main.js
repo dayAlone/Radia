@@ -92,6 +92,13 @@
         return $('#name').addClass('parsley-error');
       }
     });
+    $('#Order').on('hidden.bs.modal', function() {
+      $('#Order form').each(function() {
+        return $(this).trigger('reset').addClass('hidden');
+      });
+      $('#theme, #name').val('');
+      return getCaptcha();
+    });
     return $('input[type=file]').on('change', function() {
       return $(this).parent().find('.filename').text($(this).val().replace(/.+[\\\/]/, ""));
     });

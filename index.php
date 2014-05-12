@@ -67,9 +67,9 @@ catch(e) { }
 	false
 );?>
 
-	<div id="about" class="block bgcolor blue3">
+	<div id="about" class="block bgcolor white bright">
       <div class="container">
-        <h3 class="title border-bottom">
+        <h3 class="title no-bottom-padding">
           Если коротко, то
         </h3>
         <p class="highlight">
