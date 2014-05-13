@@ -783,6 +783,13 @@ a.big-button.gray4:hover, .resp_slider .item .content a.button.gray4:hover {
   margin-bottom: 50px;
 }
 
+#partners .row {
+  line-height: 60px;
+}
+#partners .row img {
+  vertical-align: middle;
+}
+
 .modal-backdrop.in {
   opacity: 0.8;
 }

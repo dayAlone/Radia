@@ -89,7 +89,7 @@ $APPLICATION->SetTitle("О компании | RADIA Interactive");
    </div>
 </div>
 
-<div class="bgcolor block bright gray4">
+<div class="bgcolor block bright gray4" id="partners">
 	<div class="container">
 		<div class="row center">
 			<div class="col-md-3">
