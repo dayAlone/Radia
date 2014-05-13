@@ -276,6 +276,15 @@ a.big-button:hover, .resp_slider .item .content a.button:hover {
 .gray2 a.big-button:hover, .gray2 .resp_slider .item .content a.button:hover {
   color: #d0d0d4;
 }
+.gray5 a.big-button:hover, .gray5 .resp_slider .item .content a.button:hover {
+  color: #2f3748;
+}
+.gray6 a.big-button:hover, .gray6 .resp_slider .item .content a.button:hover {
+  color: #2a2e3d;
+}
+.gray7 a.big-button:hover, .gray7 .resp_slider .item .content a.button:hover {
+  color: #1f2231;
+}
 .gray3 a.big-button:hover, .gray3 .resp_slider .item .content a.button:hover {
   color: #dde3e8;
 }
@@ -369,6 +378,27 @@ a.big-button.gray2, .resp_slider .item .content a.button.gray2 {
 }
 a.big-button.gray2:hover, .resp_slider .item .content a.button.gray2:hover {
   background: #d0d0d4;
+}
+a.big-button.gray5, .resp_slider .item .content a.button.gray5 {
+  color: #2f3748;
+  border-color: #2f3748;
+}
+a.big-button.gray5:hover, .resp_slider .item .content a.button.gray5:hover {
+  background: #2f3748;
+}
+a.big-button.gray6, .resp_slider .item .content a.button.gray6 {
+  color: #2a2e3d;
+  border-color: #2a2e3d;
+}
+a.big-button.gray6:hover, .resp_slider .item .content a.button.gray6:hover {
+  background: #2a2e3d;
+}
+a.big-button.gray7, .resp_slider .item .content a.button.gray7 {
+  color: #1f2231;
+  border-color: #1f2231;
+}
+a.big-button.gray7:hover, .resp_slider .item .content a.button.gray7:hover {
+  background: #1f2231;
 }
 a.big-button.gray3, .resp_slider .item .content a.button.gray3 {
   color: #dde3e8;
@@ -467,6 +497,15 @@ a.big-button.gray4:hover, .resp_slider .item .content a.button.gray4:hover {
 .color.gray2 {
   color: #d0d0d4 !important;
 }
+.color.gray5 {
+  color: #2f3748 !important;
+}
+.color.gray6 {
+  color: #2a2e3d !important;
+}
+.color.gray7 {
+  color: #1f2231 !important;
+}
 .color.gray3 {
   color: #dde3e8 !important;
 }
@@ -521,6 +560,15 @@ a.big-button.gray4:hover, .resp_slider .item .content a.button.gray4:hover {
 }
 .bgcolor.gray2 {
   background-color: #d0d0d4;
+}
+.bgcolor.gray5 {
+  background-color: #2f3748;
+}
+.bgcolor.gray6 {
+  background-color: #2a2e3d;
+}
+.bgcolor.gray7 {
+  background-color: #1f2231;
 }
 .bgcolor.gray3 {
   background-color: #dde3e8;
@@ -655,7 +703,7 @@ a.big-button.gray4:hover, .resp_slider .item .content a.button.gray4:hover {
 #services p {
   width: 90%;
   margin-left: 5%;
-  color: #b4b4c8;
+  color: #6b727a;
   line-height: 17px;
   margin-bottom: 0px;
   font-size: 14px;
@@ -671,21 +719,18 @@ a.big-button.gray4:hover, .resp_slider .item .content a.button.gray4:hover {
 #services .item {
   margin-bottom: 60px;
 }
-#services .item:hover p {
-  color: white;
-}
 #services .item .title {
-  text-align: center;
   display: inline-block;
-  font-weight: 700;
+  font-weight: 600;
   margin-bottom: 20px;
   font-size: 16px;
   float: left;
   width: 100%;
   position: relative;
+  margin-left: 5%;
 }
 #services .item .title a {
-  color: #00bbd1;
+  color: #2f3748;
   text-transform: uppercase;
 }
 #services .item .title a:hover {
@@ -864,6 +909,17 @@ a.file:hover, #Order input[type=submit]:hover {
   float: left;
   width: 100%;
   position: relative;
+}
+#portfolio.small .item {
+  width: 240px;
+  height: 240px;
+}
+#portfolio.small .item .over {
+  line-height: 240px;
+}
+#portfolio.small .frame {
+  height: 240px;
+  width: 98%;
 }
 #portfolio.list {
   margin: 30px 0 60px;

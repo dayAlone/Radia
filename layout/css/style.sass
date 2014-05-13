@@ -11,15 +11,18 @@ $blue7   : #0E2A60
 $gray    : #474654
 $gray2   : #D0D0D4
 $gray3   : #DDE3E8
-$gray4  : #dfeaec
+$gray4   : #dfeaec
+$gray5   : #2f3748
+$gray6   : #2a2e3d
+$gray7   : #1f2231
 $violet  : #1E1B36
 $violet2 : #41377D
 $orange  : #FFBA00
 $orange2 : #FF9600
 $black   : #13121B
 $white   : white
-$c_name  : red, blue, blue2, blue3, blue4, blue5, blue6, blue7, gray, gray2, gray3, violet, violet2, orange, orange2, black, white, gray4
-$c_val   : $red, $blue, $blue2, $blue3, $blue4, $blue5, $blue6, $blue7, $gray, $gray2, $gray3, $violet, $violet2, $orange, $orange2, $black, $white, $gray4
+$c_name  : red, blue, blue2, blue3, blue4, blue5, blue6, blue7, gray, gray2, gray5, gray6, gray7, gray3, violet, violet2, orange, orange2, black, white, gray4
+$c_val   : $red, $blue, $blue2, $blue3, $blue4, $blue5, $blue6, $blue7, $gray, $gray2, $gray5, $gray6, $gray7, $gray3, $violet, $violet2, $orange, $orange2, $black, $white, $gray4
 
 $i : '../images/'
 
@@ -299,7 +302,7 @@ a.big-button, .resp_slider .item .content a.button
 	p
 		width: 90%
 		margin-left: 5%
-		color: #b4b4c8
+		color: #6b727a
 		line-height: 17px
 		margin-bottom: 0px
 		font-size: 14px
@@ -307,19 +310,15 @@ a.big-button, .resp_slider .item .content a.button
 		+transition-duration(.4s)
 	.item
 		margin-bottom: 60px
-		
-		&:hover
-			p
-				color: white
 		.title
-			text-align: center
 			display: inline-block
-			font-weight: 700
+			font-weight: 600
 			margin-bottom: 20px
 			font-size: 16px
 			+full-width
+			margin-left: 5%
 			a
-				color: $blue2
+				color: $gray5
 				text-transform: uppercase
 				&:hover
 					opacity: 1
@@ -449,6 +448,15 @@ a.file, #Order input[type=submit]
 
 #portfolio
 	+full-width
+	&.small
+		.item
+			width: 240px
+			height: 240px
+			.over
+				line-height: 240px
+		.frame
+			height: 240px
+			width: 98%
 	&.list
 		margin: 30px 0 60px
 		.item
