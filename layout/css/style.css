@@ -628,7 +628,7 @@ a.big-button.gray4:hover, .resp_slider .item .content a.button.gray4:hover {
 .bgcolor.bright a.big-button:hover {
   background: #2f3748;
 }
-.bgcolor.bright a, .bgcolor.bright p, .bgcolor.bright h1, .bgcolor.bright h2 {
+.bgcolor.bright a, .bgcolor.bright p, .bgcolor.bright h1, .bgcolor.bright h2, .bgcolor.bright li {
   color: #2f3748;
 }
 .bgcolor.bright h1.title, .bgcolor.bright h2.title {
@@ -1242,6 +1242,11 @@ h1.title {
   padding-bottom: 20px;
   font-weight: 300;
 }
+h1.title.service-title {
+  letter-spacing: 5px;
+  font-size: 50px;
+  margin-bottom: 30px;
+}
 
 h2.title {
   font-weight: 300;
@@ -1273,6 +1278,11 @@ h3.title {
 }
 h3.title.big {
   font-size: 50px;
+}
+
+h1.title, h2.title, h3.title {
+  margin-left: -15px;
+  margin-right: -15px;
 }
 
 p {

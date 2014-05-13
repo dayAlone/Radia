@@ -238,12 +238,13 @@ a.big-button, .resp_slider .item .content a.button
 			border-color: #2f3748
 			&:hover
 				background: #2f3748
-		a, p, h1, h2
+		a, p, h1, h2, li
 			color: #2f3748
 		h1.title, h2.title
 			color: black !important
 		h3.title
 			color: #858b96 !important
+
 #title
 	background-position: center center
 	background-repeat: no-repeat
@@ -683,6 +684,10 @@ h1.title
 	text-transform: uppercase
 	padding-bottom: 20px
 	font-weight: 300
+	&.service-title
+		letter-spacing: 5px
+		font-size: 50px
+		margin-bottom: 30px
 
 h2.title
 	font-weight: 300
@@ -707,6 +712,10 @@ h3.title
 	color: black
 	&.big
 		font-size: 50px
+
+h1.title, h2.title, h3.title
+	margin-left: -15px
+	margin-right: -15px
 
 p
 	+full-width
