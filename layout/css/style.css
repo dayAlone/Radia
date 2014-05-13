@@ -685,6 +685,11 @@ a.big-button.gray4:hover, .resp_slider .item .content a.button.gray4:hover {
   position: relative;
   padding: 45px 0;
 }
+.block.bgimg {
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .block p {
   color: #222326;
 }

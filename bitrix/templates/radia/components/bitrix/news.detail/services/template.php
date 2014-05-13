@@ -1,6 +1,6 @@
-    <div class="block bgcolor blue6 no-bottom-padding" <?=($arResult['PROPERTIES']['BG_TITLE']['VALUE']?"style='background-color:".$arResult['PROPERTIES']['BG_TITLE']['VALUE']."'":"")?>>
+    <div class="block bgcolor blue6 no-bottom-padding bgimg" style="<?=($arResult['PROPERTIES']['BG_TITLE']['VALUE']?"background-color:".$arResult['PROPERTIES']['BG_TITLE']['VALUE'].";":"")?><?=($arResult['PROPERTIES']['BG_IMAGE']['VALUE']?"background-image:url(".CFile::GetPath($arResult['PROPERTIES']['BG_IMAGE']['VALUE']).");":"")?>">
       <div class="container">
-        <h1 class="title service-title" <?=($arResult['PROPERTIES']['COLOR_TITLE']['VALUE']?"style='color:".$arResult['PROPERTIES']['COLOR_TITLE']['VALUE']."'":"")?>>
+        <h1 class="title service-title" style="<?=($arResult['PROPERTIES']['COLOR_TITLE']['VALUE']?"color:".$arResult['PROPERTIES']['COLOR_TITLE']['VALUE'].";":"")?>">
           <?=$arResult['NAME']?>
         </h1>
       </div>
