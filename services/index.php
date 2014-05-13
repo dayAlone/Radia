@@ -3,14 +3,13 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Услуги | RADIA Interactive");
 ?>
 
-	<div id="services" class="block bgcolor violet2">
+	<div class="block bgcolor gray4 bright">
       <div class="container">
         <h1 class="title orange">
           Наши услуги
         </h1>
-        <h2 class="color orange title border-bottom border-top">
-          итак, вот что мы готовы вам предложить:
-        </h2>
+        <p class="highlight2 border-bottom big-bottom-padding big-bottom-margin">Итак, вот что мы готовы вам предложить:</p>
+        <div id="services">
         <?
           	$APPLICATION->IncludeComponent("bitrix:news.list", "services", array(
 				"IBLOCK_TYPE" => "content",
@@ -66,11 +65,12 @@ $APPLICATION->SetTitle("Услуги | RADIA Interactive");
 				false
 			);
 		?>
+		</div>
       </div>
     </div>
 
 
-	<div id="portfolio" class="block bgcolor blue2">
+	<div id="portfolio" class="small block bgcolor gray6">
       <div class="container">
         <h3 class="title">
           А вот и некоторые примеры
@@ -134,7 +134,7 @@ $APPLICATION->SetTitle("Услуги | RADIA Interactive");
 		?>
       </div>
       <div class="container">
-        <p class="center">
+        <p class="center no-bottom-margin">
           <a href="#" class="big-button">
             покажите мне еще
           </a>
