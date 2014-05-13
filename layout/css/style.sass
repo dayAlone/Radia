@@ -15,14 +15,15 @@ $gray4   : #dfeaec
 $gray5   : #2f3748
 $gray6   : #2a2e3d
 $gray7   : #1f2231
+$gray8   : #f1f6f7
 $violet  : #1E1B36
 $violet2 : #41377D
 $orange  : #FFBA00
 $orange2 : #FF9600
 $black   : #13121B
 $white   : white
-$c_name  : red, blue, blue2, blue3, blue4, blue5, blue6, blue7, gray, gray2, gray5, gray6, gray7, gray3, violet, violet2, orange, orange2, black, white, gray4
-$c_val   : $red, $blue, $blue2, $blue3, $blue4, $blue5, $blue6, $blue7, $gray, $gray2, $gray5, $gray6, $gray7, $gray3, $violet, $violet2, $orange, $orange2, $black, $white, $gray4
+$c_name  : red, blue, blue2, blue3, blue4, blue5, blue6, blue7, gray, gray2, gray5, gray6, gray7, gray8, gray3, violet, violet2, orange, orange2, black, white, gray4
+$c_val   : $red, $blue, $blue2, $blue3, $blue4, $blue5, $blue6, $blue7, $gray, $gray2, $gray5, $gray6, $gray7, $gray8, $gray3, $violet, $violet2, $orange, $orange2, $black, $white, $gray4
 
 $i : '../images/'
 
@@ -231,12 +232,16 @@ a.big-button, .resp_slider .item .content a.button
 		p
 			color: white
 	&.bright
-		.border-bottom, a.big-button
+		.border-bottom, .border-top
+			border-color: #008eff
+		a.big-button
 			border-color: #2f3748
 			&:hover
 				background: #2f3748
 		a, p, h1, h2
 			color: #2f3748
+		h1.title, h2.title
+			color: black !important
 		h3.title
 			color: #858b96 !important
 #title
@@ -621,8 +626,9 @@ a.file, #Order input[type=submit]
 		line-height: 25px
 
 .highlight2
-	font-size: 24px
+	font-size: 20px
 	line-height: 28px
+	font-weight: 300
 	+full-width
 	text-align: center
 	margin-bottom: 30px
@@ -663,13 +669,15 @@ h1.title
 	font-size: 65px
 	text-transform: uppercase
 	padding-bottom: 20px
+	font-weight: 300
 
 h2.title
-	font-weight: 700
+	font-weight: 300
 	font-size: 30px
 	text-transform: uppercase
 	padding-bottom: 30px
 	margin-bottom: 50px
+	line-height: 40px
 	&.big
 		font-size: 40px
 a

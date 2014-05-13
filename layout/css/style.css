@@ -285,6 +285,9 @@ a.big-button:hover, .resp_slider .item .content a.button:hover {
 .gray7 a.big-button:hover, .gray7 .resp_slider .item .content a.button:hover {
   color: #1f2231;
 }
+.gray8 a.big-button:hover, .gray8 .resp_slider .item .content a.button:hover {
+  color: #f1f6f7;
+}
 .gray3 a.big-button:hover, .gray3 .resp_slider .item .content a.button:hover {
   color: #dde3e8;
 }
@@ -400,6 +403,13 @@ a.big-button.gray7, .resp_slider .item .content a.button.gray7 {
 a.big-button.gray7:hover, .resp_slider .item .content a.button.gray7:hover {
   background: #1f2231;
 }
+a.big-button.gray8, .resp_slider .item .content a.button.gray8 {
+  color: #f1f6f7;
+  border-color: #f1f6f7;
+}
+a.big-button.gray8:hover, .resp_slider .item .content a.button.gray8:hover {
+  background: #f1f6f7;
+}
 a.big-button.gray3, .resp_slider .item .content a.button.gray3 {
   color: #dde3e8;
   border-color: #dde3e8;
@@ -506,6 +516,9 @@ a.big-button.gray4:hover, .resp_slider .item .content a.button.gray4:hover {
 .color.gray7 {
   color: #1f2231 !important;
 }
+.color.gray8 {
+  color: #f1f6f7 !important;
+}
 .color.gray3 {
   color: #dde3e8 !important;
 }
@@ -570,6 +583,9 @@ a.big-button.gray4:hover, .resp_slider .item .content a.button.gray4:hover {
 .bgcolor.gray7 {
   background-color: #1f2231;
 }
+.bgcolor.gray8 {
+  background-color: #f1f6f7;
+}
 .bgcolor.gray3 {
   background-color: #dde3e8;
 }
@@ -603,14 +619,20 @@ a.big-button.gray4:hover, .resp_slider .item .content a.button.gray4:hover {
 .bgcolor.block p {
   color: white;
 }
-.bgcolor.bright .border-bottom, .bgcolor.bright a.big-button {
+.bgcolor.bright .border-bottom, .bgcolor.bright .border-top {
+  border-color: #008eff;
+}
+.bgcolor.bright a.big-button {
   border-color: #2f3748;
 }
-.bgcolor.bright .border-bottom:hover, .bgcolor.bright a.big-button:hover {
+.bgcolor.bright a.big-button:hover {
   background: #2f3748;
 }
 .bgcolor.bright a, .bgcolor.bright p, .bgcolor.bright h1, .bgcolor.bright h2 {
   color: #2f3748;
+}
+.bgcolor.bright h1.title, .bgcolor.bright h2.title {
+  color: black !important;
 }
 .bgcolor.bright h3.title {
   color: #858b96 !important;
@@ -1134,8 +1156,9 @@ a.file:hover, #Order input[type=submit]:hover {
 }
 
 .highlight2 {
-  font-size: 24px;
+  font-size: 20px;
   line-height: 28px;
+  font-weight: 300;
   float: left;
   width: 100%;
   position: relative;
@@ -1194,14 +1217,16 @@ h1.title {
   font-size: 65px;
   text-transform: uppercase;
   padding-bottom: 20px;
+  font-weight: 300;
 }
 
 h2.title {
-  font-weight: 700;
+  font-weight: 300;
   font-size: 30px;
   text-transform: uppercase;
   padding-bottom: 30px;
   margin-bottom: 50px;
+  line-height: 40px;
 }
 h2.title.big {
   font-size: 40px;
