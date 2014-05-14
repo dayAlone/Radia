@@ -58,6 +58,15 @@
     </div>
    	<? } ?>
     <?=$arResult['~DETAIL_TEXT']?>
+
+    <div class="block bgcolor bright gray4 small-top-padding small-bottom-padding">
+      <div class="container">
+        <p class="center small-top-margin no-bottom-margin">
+          <a href="/portfolio/" class="big-button">вернуться к списку работ</a>
+        </p>
+      </div>
+    </div>
+
     <?
       global $arFilter;
       $arFilter = array('!ID'=>$arResult['ID']);

@@ -143,13 +143,7 @@ if($list) {
 	false
 );?>
 	
-    <div class="block bgcolor gray2 small-top-padding small-bottom-padding">
-      <div class="container">
-        <p class="highlight small small-top-margin small-bottom-margin">
-          <a href="/portfolio/" class="color underline black">вернуться к списку работ</a>
-        </p>
-      </div>
-    </div>
+    
 
 <?}
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
