@@ -665,6 +665,13 @@ a.big-button.gray4:hover, .resp_slider .item .content a.button.gray4:hover {
   display: inline-block;
   line-height: 20px;
 }
+#title h1 {
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+#title .big-button {
+  font-size: 20px;
+}
 #title h3 {
   max-width: 980px;
   font-size: 40px;
@@ -681,6 +688,9 @@ a.big-button.gray4:hover, .resp_slider .item .content a.button.gray4:hover {
 }
 .resp_slider h1 {
   font-family: "Proxima Nova";
+}
+.resp_slider .item .content a.button {
+  font-size: 20px;
 }
 .resp_slider .item .content p {
   font-family: "Times New Roman";
@@ -778,7 +788,7 @@ a.big-button.gray4:hover, .resp_slider .item .content a.button.gray4:hover {
 }
 #services .item .title a:hover {
   opacity: 1;
-  color: #ffba00;
+  color: #1891fb;
 }
 #services .item .title .frame {
   height: 100px;
@@ -1340,6 +1350,7 @@ h3.title.big {
 h1.title, h2.title, h3.title {
   margin-left: -15px;
   margin-right: -15px;
+  padding-left: 15px;
 }
 
 p {
