@@ -10,7 +10,9 @@
     h = $(window).height();
     $('#title').height(h).css('line-height', h + 'px');
     $('#portfolio.list .item, #portfolio.list .item .over').height($('#portfolio.list .item').width());
-    return $('#portfolio.list .item .over').css('line-height', $('#portfolio.list .item').width() + 'px');
+    $('#portfolio.list .item .over').css('line-height', $('#portfolio.list .item').width() + 'px');
+    $('#portfolio.small .item, #portfolio.small .item .over, #portfolio.small .frame').height($('#portfolio.small .item').width());
+    return $('#portfolio.small .item .over').css('line-height', $('#portfolio.small .item').width() + 'px');
   };
 
   getCaptcha = function() {

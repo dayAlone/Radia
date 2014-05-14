@@ -473,13 +473,20 @@ a.file, #Order input[type=submit]
 	+full-width
 	&.small
 		.item
-			width: 240px
+			width: 25%
 			height: 240px
 			.over
 				line-height: 240px
+				width: 100%
+				.text
+					width: 100%
+			@media screen and (min-width: 1200px)
+				width: 20%
+			@media screen and (min-width: 1800px)
+				width: 16.6666666667%
 		.frame
 			height: 240px
-			width: 98%
+			width: 100%
 	&.more-list
 		margin: 30px 0 30px
 		.item

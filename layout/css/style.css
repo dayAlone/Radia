@@ -972,15 +972,29 @@ a.file:hover, #Order input[type=submit]:hover {
   position: relative;
 }
 #portfolio.small .item {
-  width: 240px;
+  width: 25%;
   height: 240px;
 }
 #portfolio.small .item .over {
   line-height: 240px;
+  width: 100%;
+}
+#portfolio.small .item .over .text {
+  width: 100%;
+}
+@media screen and (min-width: 1200px) {
+  #portfolio.small .item {
+    width: 20%;
+  }
+}
+@media screen and (min-width: 1800px) {
+  #portfolio.small .item {
+    width: 16.66667%;
+  }
 }
 #portfolio.small .frame {
   height: 240px;
-  width: 98%;
+  width: 100%;
 }
 #portfolio.more-list {
   margin: 30px 0 30px;
