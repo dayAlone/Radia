@@ -71,13 +71,13 @@
       global $arFilter;
       $arFilter = array('!ID'=>$arResult['ID']);
     ?>
-    <div id="portfolio" class="small block bgcolor gray6 small-top-padding small-bottom-padding">
+    <div id="portfolio" class="small block bgcolor gray6 small-top-padding no-bottom-padding">
       <div class="container">
         <h3 class="title small-bottom-margin">
           А еще мы покажем вам, что делали
         </h3>
       </div>
-      <div class="frame">
+      <div class="frame no-bottom-margin no-bottom-padding">
         <?
           $APPLICATION->IncludeComponent("bitrix:news.list", "portfolio_index", array(
             "IBLOCK_TYPE" => "content",
