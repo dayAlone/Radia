@@ -971,6 +971,21 @@ a.file:hover, #Order input[type=submit]:hover {
   height: 240px;
   width: 98%;
 }
+#portfolio.more-list {
+  margin: 30px 0 30px;
+}
+#portfolio.more-list .item {
+  width: 97.5%;
+  height: 320px;
+}
+#portfolio.more-list .item .over {
+  height: 320px;
+  line-height: 320px;
+  width: 100%;
+}
+#portfolio.more-list .item .text {
+  width: 100%;
+}
 #portfolio.list {
   margin: 30px 0 0px;
 }

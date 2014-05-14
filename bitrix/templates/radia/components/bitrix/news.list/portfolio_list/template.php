@@ -4,7 +4,7 @@
         <h3 class="title color border-bottom black">
           Смотрите также
         </h1>
-        <div id="portfolio" class="list small-bottom-margin no-top-margin">
+        <div id="portfolio" class="more-list small-bottom-margin no-top-margin">
           <?
           $i=0;
           foreach($arResult["ITEMS"] as $arItem):
@@ -14,7 +14,7 @@
             }
           ?>
             <div class="col-md-4">
-                <a href="<?=$arItem['DETAIL_PAGE_URL']?>" class="item" style="background-image: url(<?=$arItem['PREVIEW_PICTURE']['SRC']?>)">
+                <a href="<?=$arItem['DETAIL_PAGE_URL']?>" class="item" style="background-image: url(http://radia.ru<?=$arItem['PREVIEW_PICTURE']['SRC']?>)">
                   <span class="over">
                     <span class="text">
                       <span class="name"><?=$arItem['NAME']?></span><span class="line"></span><span class="type">
