@@ -91,18 +91,19 @@ $APPLICATION->SetTitle("О компании | RADIA Interactive");
 
 <div class="bgcolor block bright gray4" id="partners">
 	<div class="container">
+		<h3 class="title no-top-margin no-bottom-padding">Наши партнеры</h3>
 		<div class="row center">
 			<div class="col-md-3">
-				<a href="#"><img src="/layout/images/part-1.png" alt=""></a>
+				<img src="/layout/images/part-1.png" alt="">
 			</div>
 			<div class="col-md-3">
-				<a href="#"><img src="/layout/images/part-2.png" alt=""></a>
+				<img src="/layout/images/part-2.png" alt="">
 			</div>
 			<div class="col-md-3">
-				<a href="#"><img src="/layout/images/part-3.png" alt=""></a>
+				<img src="/layout/images/part-3.png" alt="">
 			</div>
 			<div class="col-md-3">
-				<a href="#"><img src="/layout/images/part-4.png" alt=""></a>
+				<img src="/layout/images/part-4.png" alt="">
 			</div>
 		</div>
 	</div>

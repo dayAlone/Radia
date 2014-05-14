@@ -1,4 +1,4 @@
-        <div class="sections border-top border-bottom small-top-padding small-bottom-padding center">
+        <div class="sections small-top-padding small-bottom-padding center">
           <?
             $APPLICATION->IncludeComponent("bitrix:catalog.section.list","portfolio",
             Array(

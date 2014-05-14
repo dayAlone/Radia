@@ -2,7 +2,7 @@
 <?
 $i=0;
 foreach($arResult["ITEMS"] as $arItem):
-	?><a href="<?=$arItem['DETAIL_PAGE_URL']?>" class="item" style="background: url(<?=$arItem['PREVIEW_PICTURE']['SRC']?>)">
+	?><a href="<?=$arItem['DETAIL_PAGE_URL']?>" class="item" style="background-image: url(http://radia.ru<?=$arItem['PREVIEW_PICTURE']['SRC']?>)">
       <span class="over">
         <span class="text">
           <span class="name"><?=$arItem['NAME']?></span><span class="line"></span>

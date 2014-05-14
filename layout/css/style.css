@@ -835,7 +835,7 @@ a.file:hover, #Order input[type=submit]:hover {
 }
 
 .parsley-error {
-  border: 2px solid #f64531 !important;
+  border: 1px solid #f64531 !important;
 }
 
 .parsley-errors-list {
@@ -878,6 +878,7 @@ a.file:hover, #Order input[type=submit]:hover {
   float: left;
   width: 100%;
   position: relative;
+  font-weight: 600;
   line-height: 25px;
   padding: 7px 10px 0;
   font-size: 16px;
@@ -887,7 +888,7 @@ a.file:hover, #Order input[type=submit]:hover {
   float: left;
   width: 100%;
   position: relative;
-  border: 2px solid #9ea6af;
+  border: 1px solid #9ea6af;
   line-height: 25px;
   padding: 3px 10px;
   font-size: 15px;
@@ -912,7 +913,7 @@ a.file:hover, #Order input[type=submit]:hover {
   margin-top: 30px;
 }
 #Order .modal-content input[name=captcha_word], #Order .modal-content input[type=submit] {
-  height: 44px;
+  height: 42px;
 }
 #Order .modal-content input[type=submit] {
   float: right;
@@ -928,7 +929,7 @@ a.file:hover, #Order input[type=submit]:hover {
   opacity: 1;
 }
 #Order .modal-content .captcha_img {
-  border: 2px solid #9ea6af;
+  border: 1px solid #9ea6af;
 }
 #Order .modal-content .frame {
   float: left;
@@ -1134,6 +1135,10 @@ a.file:hover, #Order input[type=submit]:hover {
 #footer {
   padding-top: 70px;
 }
+#footer .highlight {
+  font-size: 40px;
+  line-height: 45px;
+}
 #footer p {
   color: #b4b4c8;
 }
@@ -1288,7 +1293,8 @@ h1.title + .highlight2 {
 }
 
 h1.title {
-  font-size: 65px;
+  font-size: 53px;
+  letter-spacing: 10px;
   text-transform: uppercase;
   padding-bottom: 20px;
   font-weight: 300;

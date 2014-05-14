@@ -374,7 +374,7 @@ a.file, #Order input[type=submit]
 	padding: 2px 20px 0
 	display: inline-block
 .parsley-error
-	border: 2px solid #f64531 !important
+	border: 1px solid #f64531 !important
 .parsley-errors-list
 	display: none !important
 #Order
@@ -405,13 +405,14 @@ a.file, #Order input[type=submit]
 			font-weight: 600
 		label
 			+full-width
+			font-weight: 600
 			line-height: 25px
 			padding: 7px 10px 0
 			font-size: 16px
 			text-transform: uppercase
 		input[type=email], input[type=text], textarea
 			+full-width
-			border: 2px solid #9EA6AF
+			border: 1px solid #9EA6AF
 			line-height: 25px
 			padding: 3px 10px
 			font-size: 15px
@@ -431,7 +432,7 @@ a.file, #Order input[type=submit]
 		.row.last
 			margin-top: 30px
 		input[name=captcha_word], input[type=submit]
-			height: 44px
+			height: 42px
 		input[type=submit]
 			float: right
 			text-transform: uppercase
@@ -442,7 +443,7 @@ a.file, #Order input[type=submit]
 				+box-shadow(2px 2px 0 0 rgba(177,32,20,.5))
 				opacity: 1
 		.captcha_img
-			border: 2px solid #9EA6AF
+			border: 1px solid #9EA6AF
 		.frame
 			+full-width
 		select
@@ -604,6 +605,9 @@ a.file, #Order input[type=submit]
 
 #footer
 	padding-top: 70px
+	.highlight
+		font-size: 40px
+		line-height: 45px
 	p
 		color: #b4b4c8
 	.copyright
@@ -705,7 +709,8 @@ h1.title + .highlight2
 	padding-top: 35px
 
 h1.title
-	font-size: 65px
+	font-size: 53px
+	letter-spacing: 10px
 	text-transform: uppercase
 	padding-bottom: 20px
 	font-weight: 300
