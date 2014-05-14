@@ -288,6 +288,9 @@ a.big-button:hover, .resp_slider .item .content a.button:hover {
 .gray8 a.big-button:hover, .gray8 .resp_slider .item .content a.button:hover {
   color: #f1f6f7;
 }
+.gray9 a.big-button:hover, .gray9 .resp_slider .item .content a.button:hover {
+  color: #151723;
+}
 .gray3 a.big-button:hover, .gray3 .resp_slider .item .content a.button:hover {
   color: #dde3e8;
 }
@@ -410,6 +413,13 @@ a.big-button.gray8, .resp_slider .item .content a.button.gray8 {
 a.big-button.gray8:hover, .resp_slider .item .content a.button.gray8:hover {
   background: #f1f6f7;
 }
+a.big-button.gray9, .resp_slider .item .content a.button.gray9 {
+  color: #151723;
+  border-color: #151723;
+}
+a.big-button.gray9:hover, .resp_slider .item .content a.button.gray9:hover {
+  background: #151723;
+}
 a.big-button.gray3, .resp_slider .item .content a.button.gray3 {
   color: #dde3e8;
   border-color: #dde3e8;
@@ -519,6 +529,9 @@ a.big-button.gray4:hover, .resp_slider .item .content a.button.gray4:hover {
 .color.gray8 {
   color: #f1f6f7 !important;
 }
+.color.gray9 {
+  color: #151723 !important;
+}
 .color.gray3 {
   color: #dde3e8 !important;
 }
@@ -585,6 +598,9 @@ a.big-button.gray4:hover, .resp_slider .item .content a.button.gray4:hover {
 }
 .bgcolor.gray8 {
   background-color: #f1f6f7;
+}
+.bgcolor.gray9 {
+  background-color: #151723;
 }
 .bgcolor.gray3 {
   background-color: #dde3e8;
@@ -956,10 +972,24 @@ a.file:hover, #Order input[type=submit]:hover {
   width: 98%;
 }
 #portfolio.list {
-  margin: 30px 0 60px;
+  margin: 30px 0 0px;
 }
 #portfolio.list .item {
-  width: 97.4%;
+  width: 25%;
+  height: 320px;
+  margin: 0;
+  display: block;
+  float: left;
+}
+@media screen and (min-width: 1200px) {
+  #portfolio.list .item {
+    width: 20%;
+  }
+}
+@media screen and (min-width: 1800px) {
+  #portfolio.list .item {
+    width: 16.66667%;
+  }
 }
 #portfolio.list span.over {
   width: 100%;
@@ -1316,16 +1346,18 @@ span.description {
   margin-bottom: 20px;
 }
 .sections a {
-  font-weight: 700;
+  font-weight: 600;
   text-transform: uppercase;
   line-height: 25px;
   border-radius: 4px;
   padding: 3px 10px 0;
   margin: -5px 10px;
   display: inline-block;
-  border: 2px solid white;
+  border: 1px solid #151723;
+  opacity: 0.5;
 }
 .sections a:hover, .sections a.active {
-  color: #13121b;
-  border: 2px solid #13121b;
+  color: white;
+  opacity: 1;
+  border: 1px solid white;
 }

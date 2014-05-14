@@ -16,14 +16,15 @@ $gray5   : #2f3748
 $gray6   : #2a2e3d
 $gray7   : #1f2231
 $gray8   : #f1f6f7
+$gray9   : #151723
 $violet  : #1E1B36
 $violet2 : #41377D
 $orange  : #FFBA00
 $orange2 : #FF9600
 $black   : #13121B
 $white   : white
-$c_name  : red, blue, blue2, blue3, blue4, blue5, blue6, blue7, gray, gray2, gray5, gray6, gray7, gray8, gray3, violet, violet2, orange, orange2, black, white, gray4
-$c_val   : $red, $blue, $blue2, $blue3, $blue4, $blue5, $blue6, $blue7, $gray, $gray2, $gray5, $gray6, $gray7, $gray8, $gray3, $violet, $violet2, $orange, $orange2, $black, $white, $gray4
+$c_name  : red, blue, blue2, blue3, blue4, blue5, blue6, blue7, gray, gray2, gray5, gray6, gray7, gray8, gray9, gray3, violet, violet2, orange, orange2, black, white, gray4
+$c_val   : $red, $blue, $blue2, $blue3, $blue4, $blue5, $blue6, $blue7, $gray, $gray2, $gray5, $gray6, $gray7, $gray8, $gray9, $gray3, $violet, $violet2, $orange, $orange2, $black, $white, $gray4
 
 $i : '../images/'
 
@@ -472,9 +473,17 @@ a.file, #Order input[type=submit]
 			height: 240px
 			width: 98%
 	&.list
-		margin: 30px 0 60px
+		margin: 30px 0 0px
 		.item
-			width: 97.4%
+			width: 25%
+			height: 320px
+			margin: 0
+			display: block
+			float: left
+			@media screen and (min-width: 1200px)
+				width: 20%
+			@media screen and (min-width: 1800px)
+				width: 16.6666666667%
 		span.over
 			width: 100%
 			text-align: center
@@ -739,17 +748,19 @@ span.description
 	+full-width
 	margin-bottom: 20px
 	a
-		font-weight: 700
+		font-weight: 600
 		text-transform: uppercase
 		line-height: 25px
 		border-radius: 4px
 		padding: 3px 10px 0
 		margin: -5px 10px
 		display: inline-block
-		border: 2px solid white
+		border: 1px solid $gray9
+		opacity: .5
 		&:hover, &.active
-			color: $black
-			border: 2px solid $black
+			color: white
+			opacity: 1
+			border: 1px solid white
 
 
 

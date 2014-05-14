@@ -1,8 +1,10 @@
-
+container = undefined;
 size = ()-> 
 	h = $(window).height()
-	console.log(h)
 	$('#title').height(h).css('line-height',h+'px')
+	$('#portfolio.list .item, #portfolio.list .item .over').height($('#portfolio.list .item').width())
+	$('#portfolio.list .item .over').css('line-height',$('#portfolio.list .item').width()+'px')
+
 getCaptcha = ()->
 	$.get '/include/capcha.php', (data)->
 		setCaptcha data
@@ -12,7 +14,16 @@ setCaptcha = (code)->
 	$('.captcha_img').attr 'src', '/bitrix/tools/captcha.php?captcha_sid='+code
 
 $(document).ready ->
+
+	$('#portfolio.list .item:first').on $.support.transition.end, ()->
+		if !container
+			container = $('#portfolio.list').isotope
+    			itemSelector: '.item'
+		else
+			container.isotope 'layout'
+
 	size()
+
 	$(window).scroll ()->
 		if($(window).scrollTop()>0)
 			$('#toolbar:not(.inner)').addClass 'fixed'
@@ -86,4 +97,5 @@ $(document).ready ->
 
 x = undefined
 $(window).resize ->
+	clearTimeout(x)
 	x = setTimeout(size, 300)
