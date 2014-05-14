@@ -23,7 +23,7 @@ $(document).ready ->
 			 scrollTop: $('#title').height()-55
 			 , 300
 		return false
-	$('#toolbar .order, #footer .big-button').on 'click', (e)->
+	$('#toolbar .order, #footer .big-button, .big-button.order').on 'click', (e)->
 		$('#Order').modal()
 		e.preventDefault()
 	

@@ -2,7 +2,7 @@
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Контакты | RADIA Interactive");
 ?> 
-<div id="contacts" class="block bgcolor orange2"> 
+<div id="contacts" class="block bgcolor gray8 bright"> 
   <div class="container"> 
     <h1 class="title">Контакты</h1>
    
@@ -14,11 +14,15 @@ $APPLICATION->SetTitle("Контакты | RADIA Interactive");
       <br />
      Свяжитесь с нами, мы с удовольствием пообщаемся на тему сотрудничества. </p>
    
-    <h2 class="color black title border-top border-bottom big"> телефон: <a href="tel:84955404458" class="black color" >+7 495 540-44-58</a>
+    <h2 class="color black title border-top small-bottom-margin big"> телефон: <a href="tel:84955404458" class="black color" >+7 495 540-44-58</a>
       <br />
      E-mail: <a href="mailto:hello@radia.ru" class="black underline color" >hello@radia.ru</a> </h2>
-   
-    <p class="color small black highlight">наш адрес: москва, сокольнический вал, 2А<br />
+    <p class="center small-bottom-padding">
+      <a href="#" class="big-button order">
+        или заполните эту форму
+      </a>
+    </p>
+    <p class="color small black highlight big-bottom-padding">наш адрес: москва, сокольнический вал, 2А<br />
 почтовый адрес: 107113, г. Москва, а/я 94</p>
    </div>
  </div>
@@ -42,7 +46,7 @@ $APPLICATION->SetTitle("Контакты | RADIA Interactive");
               // Своё изображение иконки метки.
               iconImageHref: '/layout/images/pointer.png',
               // Размеры метки.
-              iconImageSize: [45, 47],
+              iconImageSize: [45, 44],
               // Смещение левого верхнего угла иконки относительно
               // её "ножки" (точки привязки).
               iconImageOffset: [-23, -42]

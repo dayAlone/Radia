@@ -37,7 +37,7 @@
       }, 300);
       return false;
     });
-    $('#toolbar .order, #footer .big-button').on('click', function(e) {
+    $('#toolbar .order, #footer .big-button, .big-button.order').on('click', function(e) {
       $('#Order').modal();
       return e.preventDefault();
     });
