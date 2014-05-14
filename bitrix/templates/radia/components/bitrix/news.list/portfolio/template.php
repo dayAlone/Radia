@@ -15,7 +15,7 @@
                 "SECTION_USER_FIELDS" => "",
                 "ADD_SECTIONS_CHAIN" => "Y",
                 "CACHE_TYPE" => "N",
-                "CACHE_TIME" => "36000000",
+                "CACHE_TIME" => "3600",
                 "CACHE_NOTES" => "",
                 "CACHE_GROUPS" => "Y"
               )   
@@ -26,9 +26,12 @@
           <?
           $i=0;
           foreach($arResult["ITEMS"] as $arItem):
-            
+            $raw = CIBlockElement::GetElementGroups($arItem['ID'], true);
+            $cats = "";
+            while ($x = $raw->Fetch())
+              $cats .= $x['CODE']." ";
           ?>
-            <a href="<?=$arItem['DETAIL_PAGE_URL']?>" class="item" style="background-image: url(http://radia.ru<?=$arItem['PREVIEW_PICTURE']['SRC']?>)">
+            <a href="<?=$arItem['DETAIL_PAGE_URL']?>" class="item <?=$cats?>" style="background-image: url(http://radia.ru<?=$arItem['PREVIEW_PICTURE']['SRC']?>)">
               <span class="over">
                 <span class="text">
                   <span class="name"><?=$arItem['NAME']?></span><span class="line"></span><span class="type">

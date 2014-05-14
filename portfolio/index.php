@@ -31,6 +31,9 @@ if($list) {
           портфолио
         </h1>
         <?
+        if(strlen($_REQUEST["CODE"])>0) {?>
+			<div id="filter" data-code=".<?=$_REQUEST["CODE"]?>"></div>
+        <?}
       	$APPLICATION->IncludeComponent("bitrix:news.list", "portfolio", array(
 			"IBLOCK_TYPE" => "content",
 			"IBLOCK_ID" => "5",
@@ -71,7 +74,7 @@ if($list) {
 			"ADD_SECTIONS_CHAIN" => "N",
 			"HIDE_LINK_WHEN_NO_DETAIL" => "N",
 			"PARENT_SECTION" => "",
-			"PARENT_SECTION_CODE" => $_REQUEST["CODE"],
+			"PARENT_SECTION_CODE" => "",
 			"INCLUDE_SUBSECTIONS" => "Y",
 			"PAGER_TEMPLATE" => ".default",
 			"DISPLAY_TOP_PAGER" => "N",

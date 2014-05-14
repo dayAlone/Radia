@@ -29,13 +29,27 @@
     $('#portfolio.list .item:first').on($.support.transition.end, function() {
       if (!container) {
         return container = $('#portfolio.list').isotope({
-          itemSelector: '.item'
+          itemSelector: '.item',
+          filter: $('#filter').data('code')
         });
       } else {
         return container.isotope('layout');
       }
     });
     size();
+    $('.sections a').click(function(e) {
+      var code, href;
+
+      code = $(this).data('code');
+      href = $(this).attr('href');
+      $('.sections a').removeClass('active');
+      $(this).addClass('active');
+      window.history.pushState(href, '', href);
+      container.isotope({
+        filter: code
+      });
+      return e.preventDefault();
+    });
     $(window).scroll(function() {
       if ($(window).scrollTop() > 0) {
         return $('#toolbar:not(.inner)').addClass('fixed');

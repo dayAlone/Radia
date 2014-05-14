@@ -4,7 +4,7 @@ $i=0;
 foreach($arResult["ITEMS"] as $arItem):
 
 	?>
-  <a href="<?=$arItem['DETAIL_PAGE_URL']?>" class="<?=($_REQUEST['ELEMENT_CODE']==$arItem['CODE']?"active":"")?>"><?=$arItem['NAME']?></a>
+  <a href="<?=$arItem['DETAIL_PAGE_URL']?>" data-code="<?=$arItem['CODE']?>" class="<?=($_REQUEST['ELEMENT_CODE']==$arItem['CODE']?"active":"")?>"><?=$arItem['NAME']?></a>
   <?$i++;
 endforeach;?>
 

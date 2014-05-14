@@ -19,10 +19,21 @@ $(document).ready ->
 		if !container
 			container = $('#portfolio.list').isotope
     			itemSelector: '.item'
+    			filter : $('#filter').data('code')
 		else
 			container.isotope 'layout'
 
 	size()
+
+	$('.sections a').click (e)->
+		code = $(this).data 'code'
+		href = $(this).attr('href')
+		$('.sections a').removeClass 'active'
+		$(this).addClass 'active'
+		window.history.pushState(href, '', href)
+		container.isotope
+			filter : code
+		e.preventDefault()
 
 	$(window).scroll ()->
 		if($(window).scrollTop()>0)
