@@ -1009,6 +1009,7 @@ a.big-button.gray4:hover, .resp_slider .item .content a.button.gray4:hover {
   -ms-transform: translateX(-50%);
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
+  background: white;
 }
 .block .link {
   font-size: 26px;
