@@ -38,7 +38,7 @@ if($list) {
 			"IBLOCK_TYPE" => "content",
 			"IBLOCK_ID" => "5",
 			"NEWS_COUNT" => "54",
-			"SORT_BY1" => "ACTIVE_FROM",
+			"SORT_BY1" => "SORT",
 			"SORT_ORDER1" => "DESC",
 			"SORT_BY2" => "ACTIVE_FROM",
 			"SORT_ORDER2" => "DESC",
