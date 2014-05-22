@@ -220,11 +220,17 @@ a.big-button, .resp_slider .item .content a.button
 	@for $i from 1 through length($c_val)
 		&.#{nth($c_name, $i)}
 			color: #{nth($c_val, $i)} !important
+			&.task, &.link
+				border-color: #{nth($c_val, $i)} !important
+			&.task:after, &.link:after
+				color: #{nth($c_val, $i)}
 
 .bgcolor
 	@for $i from 1 through length($c_val)
 		&.#{nth($c_name, $i)}
 			background-color: #{nth($c_val, $i)}
+			.task:after, .link:after
+				background-color: #{nth($c_val, $i)}
 	a
 		color: white
 		&:hover
@@ -291,6 +297,31 @@ a.big-button, .resp_slider .item .content a.button
 .block
 	+full-width
 	padding: 45px 0
+	.task, .link
+		min-width: 466px
+		display: inline-block
+		margin: 0 auto
+		padding: 28px 25px 25px 25px
+		border: 1px solid #000000
+		text-align: center
+		font-size: 20px
+		line-height: 29px
+		position: relative
+		&:after
+			position: absolute
+			content: "Задача"
+			text-transform: uppercase
+			font-weight: 600
+			top: -14px
+			font-size: 18px
+			letter-spacing: 2px
+			left: 50%
+			padding: 0 20px
+			+translateX(-50%)
+	.link
+		font-size: 26px
+		&:after
+			content: "Где посмотреть"
 	&.bgimg
 		background-position: top center
 		background-repeat: no-repeat
