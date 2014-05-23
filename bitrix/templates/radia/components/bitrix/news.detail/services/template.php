@@ -11,7 +11,7 @@
               $APPLICATION->IncludeComponent("bitrix:news.list", "services_list", array(
                 "IBLOCK_TYPE" => "content",
                 "IBLOCK_ID" => "2",
-                "NEWS_COUNT" => "6",
+                "NEWS_COUNT" => "12",
                 "SORT_BY1" => "SORT",
                 "SORT_ORDER1" => "ASC",
                 "FILTER_NAME" => "",

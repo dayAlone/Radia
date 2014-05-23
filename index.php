@@ -243,7 +243,7 @@ catch(e) { }
           	$APPLICATION->IncludeComponent("bitrix:news.list", "clients_index", array(
 				"IBLOCK_TYPE" => "content",
 				"IBLOCK_ID" => "4",
-				"NEWS_COUNT" => "12",
+				"NEWS_COUNT" => "6",
 				"SORT_BY1" => "ACTIVE_FROM",
 				"SORT_ORDER1" => "DESC",
 				"SORT_BY2" => "ACTIVE_FROM",
