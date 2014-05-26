@@ -1035,7 +1035,8 @@ a.big-button.gray4:hover, .resp_slider .item .content a.button.gray4:hover {
   float: left;
   width: 100%;
   position: relative;
-  font-size: 16px;
+  font-size: 15px;
+  line-height: 19px;
   margin-bottom: 10px;
 }
 
@@ -1063,9 +1064,9 @@ a.big-button.gray4:hover, .resp_slider .item .content a.button.gray4:hover {
   width: 90%;
   margin-left: 5%;
   color: #6b727a;
-  line-height: 17px;
+  line-height: 19px;
   margin-bottom: 0px;
-  font-size: 14px;
+  font-size: 15px;
   -moz-transition-property: background, opacity, color;
   -o-transition-property: background, opacity, color;
   -webkit-transition-property: background, opacity, color;
@@ -1677,7 +1678,8 @@ p {
   float: left;
   width: 100%;
   position: relative;
-  font-size: 16px;
+  font-size: 15px;
+  line-height: 19px;
   margin-bottom: 40px;
 }
 .white p {
