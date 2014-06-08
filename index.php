@@ -199,7 +199,7 @@
         </h3>
         <div class="items">
           <?
-
+          
           	$APPLICATION->IncludeComponent("bitrix:news.list", "clients_index", array(
 				"IBLOCK_TYPE" => "content",
 				"IBLOCK_ID" => "4",

@@ -74,7 +74,7 @@
     <div id="portfolio" class="small block bgcolor gray6 small-top-padding no-bottom-padding">
       <div class="container">
         <h3 class="title small-bottom-margin">
-          А еще мы покажем вам, что делали
+          Другие работы этого направления
         </h3>
       </div>
       <div class="frame no-bottom-margin no-bottom-padding">
