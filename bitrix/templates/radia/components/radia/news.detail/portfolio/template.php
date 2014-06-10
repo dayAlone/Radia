@@ -5,7 +5,7 @@
     ?>
     <div id="title" class="white bgcolor" style="background-image: url(http://radia.ru<?=$arResult['DETAIL_PICTURE']['SRC']?>), url(<?=$file['src']?>)">
       <div class="content">
-        <h1 class="title no-bottom-margin no-bottom-padding"><?=$arResult['NAME']?></h1>
+        <h1 class="title no-bottom-margin no-bottom-padding"><?=$arResult['~NAME']?></h1>
         <?if($arResult['PROPERTIES']['SUBTITLE']['VALUE']){?><h3 class="title big no-bottom-margin"><?=$arResult['PROPERTIES']['SUBTITLE']['VALUE']?></h3><?}?>
         <br/><a class="big-button <?if(!$arResult['PROPERTIES']['SUBTITLE']['VALUE']){?>small-top-margin<?}?>" href="#"><?=($arResult['PROPERTIES']['BUTTON']['VALUE']?$arResult['PROPERTIES']['BUTTON']['VALUE']:"Смотреть работу")?></a>
         <?if($arResult['PROPERTIES']['BUTTON_COLOR']['VALUE']) {?>
