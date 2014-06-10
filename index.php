@@ -111,7 +111,7 @@
         
         <p class="center">
           <a href="/services/" class="big-button blue2">
-            и кое-что еще
+            Давайте немного подробнее
           </a>
         </p>
       </div>
