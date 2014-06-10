@@ -945,6 +945,8 @@ a.big-button.gray4:hover, .resp_slider .item .content a.button.gray4:hover {
 }
 #title h1 {
   font-weight: 700;
+  font-size: 70px;
+  line-height: 70px;
   letter-spacing: 3px;
 }
 #title .big-button {
@@ -978,8 +980,8 @@ a.big-button.gray4:hover, .resp_slider .item .content a.button.gray4:hover {
   opacity: 1;
 }
 .resp_slider .item .content h1 {
-  font-size: 85px;
-  line-height: 80px;
+  font-size: 70px;
+  line-height: 70px;
   font-weight: 700;
 }
 
@@ -1479,8 +1481,8 @@ a.file:hover, #Order input[type=submit]:hover {
   padding-top: 70px;
 }
 #footer .highlight {
-  font-size: 40px;
-  line-height: 45px;
+  font-size: 30px;
+  line-height: 35px;
 }
 #footer p {
   color: #b4b4c8;
