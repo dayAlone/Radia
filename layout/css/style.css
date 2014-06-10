@@ -6,6 +6,7 @@
   font-weight: 300;
   font-style: "normal";
 }
+
 @font-face {
   font-family: "Proxima Nova";
   src: url(/layout/fonts/proximanova-reg-webfont.eot);
@@ -13,6 +14,7 @@
   font-weight: 400;
   font-style: "normal";
 }
+
 @font-face {
   font-family: "Proxima Nova";
   src: url(/layout/fonts/proximanova-bold-webfont.eot);
@@ -20,6 +22,7 @@
   font-weight: 600;
   font-style: "normal";
 }
+
 @font-face {
   font-family: "Proxima Nova";
   src: url(/layout/fonts/proximanova-xbold-webfont.eot);
@@ -27,6 +30,7 @@
   font-weight: 700;
   font-style: "normal";
 }
+
 html, body {
   min-height: 100%;
 }
@@ -43,13 +47,13 @@ body {
 }
 
 a, a span, a img, .social, .contacts {
+  -webkit-transition-property: background, opacity, color, border, box-shadow, z-index, margin, height;
   -moz-transition-property: background, opacity, color, border, box-shadow, z-index, margin, height;
   -o-transition-property: background, opacity, color, border, box-shadow, z-index, margin, height;
-  -webkit-transition-property: background, opacity, color, border, box-shadow, z-index, margin, height;
   transition-property: background, opacity, color, border, box-shadow, z-index, margin, height;
+  -webkit-transition-duration: 0.4s;
   -moz-transition-duration: 0.4s;
   -o-transition-duration: 0.4s;
-  -webkit-transition-duration: 0.4s;
   transition-duration: 0.4s;
   color: black;
 }
@@ -82,13 +86,13 @@ a:hover, a span:hover, a img:hover, .social:hover, .contacts:hover {
   top: 0;
   z-index: 2;
   position: fixed;
+  -webkit-transition-property: background;
   -moz-transition-property: background;
   -o-transition-property: background;
-  -webkit-transition-property: background;
   transition-property: background;
+  -webkit-transition-duration: 0.4s;
   -moz-transition-duration: 0.4s;
   -o-transition-duration: 0.4s;
-  -webkit-transition-duration: 0.4s;
   transition-duration: 0.4s;
   width: 100%;
   overflow: hidden;
@@ -112,13 +116,13 @@ a:hover, a span:hover, a img:hover, .social:hover, .contacts:hover {
   display: inline-block;
 }
 #toolbar .logo svg path {
+  -webkit-transition-property: all;
   -moz-transition-property: all;
   -o-transition-property: all;
-  -webkit-transition-property: all;
   transition-property: all;
+  -webkit-transition-duration: 0.4s;
   -moz-transition-duration: 0.4s;
   -o-transition-duration: 0.4s;
-  -webkit-transition-duration: 0.4s;
   transition-duration: 0.4s;
 }
 #toolbar .logo:hover svg {
@@ -129,6 +133,7 @@ a:hover, a span:hover, a img:hover, .social:hover, .contacts:hover {
 }
 #toolbar .social {
   float: left;
+  display: none;
   margin-top: 36px;
 }
 #toolbar .social a {
@@ -487,416 +492,416 @@ a.big-button.gray4:hover, .resp_slider .item .content a.button.gray4:hover {
 .color.red {
   color: #cb0019 !important;
 }
-.color.red.task, .color.red.link {
+.color.red.task, .color.red.link, .color.red .attention {
   border-color: #cb0019 !important;
 }
-.color.red.task a, .color.red.link a {
+.color.red.task a, .color.red.link a, .color.red .attention a {
   color: #cb0019;
 }
-.color.red.task:after, .color.red.link:after {
+.color.red.task:after, .color.red.link:after, .color.red.attention:after {
   color: #cb0019;
 }
 .color.blue {
   color: #092ed8 !important;
 }
-.color.blue.task, .color.blue.link {
+.color.blue.task, .color.blue.link, .color.blue .attention {
   border-color: #092ed8 !important;
 }
-.color.blue.task a, .color.blue.link a {
+.color.blue.task a, .color.blue.link a, .color.blue .attention a {
   color: #092ed8;
 }
-.color.blue.task:after, .color.blue.link:after {
+.color.blue.task:after, .color.blue.link:after, .color.blue.attention:after {
   color: #092ed8;
 }
 .color.blue2 {
   color: #00bbd1 !important;
 }
-.color.blue2.task, .color.blue2.link {
+.color.blue2.task, .color.blue2.link, .color.blue2 .attention {
   border-color: #00bbd1 !important;
 }
-.color.blue2.task a, .color.blue2.link a {
+.color.blue2.task a, .color.blue2.link a, .color.blue2 .attention a {
   color: #00bbd1;
 }
-.color.blue2.task:after, .color.blue2.link:after {
+.color.blue2.task:after, .color.blue2.link:after, .color.blue2.attention:after {
   color: #00bbd1;
 }
 .color.blue3 {
   color: #0049c1 !important;
 }
-.color.blue3.task, .color.blue3.link {
+.color.blue3.task, .color.blue3.link, .color.blue3 .attention {
   border-color: #0049c1 !important;
 }
-.color.blue3.task a, .color.blue3.link a {
+.color.blue3.task a, .color.blue3.link a, .color.blue3 .attention a {
   color: #0049c1;
 }
-.color.blue3.task:after, .color.blue3.link:after {
+.color.blue3.task:after, .color.blue3.link:after, .color.blue3.attention:after {
   color: #0049c1;
 }
 .color.blue4 {
   color: cyan !important;
 }
-.color.blue4.task, .color.blue4.link {
+.color.blue4.task, .color.blue4.link, .color.blue4 .attention {
   border-color: cyan !important;
 }
-.color.blue4.task a, .color.blue4.link a {
+.color.blue4.task a, .color.blue4.link a, .color.blue4 .attention a {
   color: cyan;
 }
-.color.blue4.task:after, .color.blue4.link:after {
+.color.blue4.task:after, .color.blue4.link:after, .color.blue4.attention:after {
   color: cyan;
 }
 .color.blue5 {
   color: #00bafb !important;
 }
-.color.blue5.task, .color.blue5.link {
+.color.blue5.task, .color.blue5.link, .color.blue5 .attention {
   border-color: #00bafb !important;
 }
-.color.blue5.task a, .color.blue5.link a {
+.color.blue5.task a, .color.blue5.link a, .color.blue5 .attention a {
   color: #00bafb;
 }
-.color.blue5.task:after, .color.blue5.link:after {
+.color.blue5.task:after, .color.blue5.link:after, .color.blue5.attention:after {
   color: #00bafb;
 }
 .color.blue6 {
   color: #244fbf !important;
 }
-.color.blue6.task, .color.blue6.link {
+.color.blue6.task, .color.blue6.link, .color.blue6 .attention {
   border-color: #244fbf !important;
 }
-.color.blue6.task a, .color.blue6.link a {
+.color.blue6.task a, .color.blue6.link a, .color.blue6 .attention a {
   color: #244fbf;
 }
-.color.blue6.task:after, .color.blue6.link:after {
+.color.blue6.task:after, .color.blue6.link:after, .color.blue6.attention:after {
   color: #244fbf;
 }
 .color.blue7 {
   color: #0e2a60 !important;
 }
-.color.blue7.task, .color.blue7.link {
+.color.blue7.task, .color.blue7.link, .color.blue7 .attention {
   border-color: #0e2a60 !important;
 }
-.color.blue7.task a, .color.blue7.link a {
+.color.blue7.task a, .color.blue7.link a, .color.blue7 .attention a {
   color: #0e2a60;
 }
-.color.blue7.task:after, .color.blue7.link:after {
+.color.blue7.task:after, .color.blue7.link:after, .color.blue7.attention:after {
   color: #0e2a60;
 }
 .color.gray {
   color: #474654 !important;
 }
-.color.gray.task, .color.gray.link {
+.color.gray.task, .color.gray.link, .color.gray .attention {
   border-color: #474654 !important;
 }
-.color.gray.task a, .color.gray.link a {
+.color.gray.task a, .color.gray.link a, .color.gray .attention a {
   color: #474654;
 }
-.color.gray.task:after, .color.gray.link:after {
+.color.gray.task:after, .color.gray.link:after, .color.gray.attention:after {
   color: #474654;
 }
 .color.gray2 {
   color: #d0d0d4 !important;
 }
-.color.gray2.task, .color.gray2.link {
+.color.gray2.task, .color.gray2.link, .color.gray2 .attention {
   border-color: #d0d0d4 !important;
 }
-.color.gray2.task a, .color.gray2.link a {
+.color.gray2.task a, .color.gray2.link a, .color.gray2 .attention a {
   color: #d0d0d4;
 }
-.color.gray2.task:after, .color.gray2.link:after {
+.color.gray2.task:after, .color.gray2.link:after, .color.gray2.attention:after {
   color: #d0d0d4;
 }
 .color.gray5 {
   color: #2f3748 !important;
 }
-.color.gray5.task, .color.gray5.link {
+.color.gray5.task, .color.gray5.link, .color.gray5 .attention {
   border-color: #2f3748 !important;
 }
-.color.gray5.task a, .color.gray5.link a {
+.color.gray5.task a, .color.gray5.link a, .color.gray5 .attention a {
   color: #2f3748;
 }
-.color.gray5.task:after, .color.gray5.link:after {
+.color.gray5.task:after, .color.gray5.link:after, .color.gray5.attention:after {
   color: #2f3748;
 }
 .color.gray6 {
   color: #2a2e3d !important;
 }
-.color.gray6.task, .color.gray6.link {
+.color.gray6.task, .color.gray6.link, .color.gray6 .attention {
   border-color: #2a2e3d !important;
 }
-.color.gray6.task a, .color.gray6.link a {
+.color.gray6.task a, .color.gray6.link a, .color.gray6 .attention a {
   color: #2a2e3d;
 }
-.color.gray6.task:after, .color.gray6.link:after {
+.color.gray6.task:after, .color.gray6.link:after, .color.gray6.attention:after {
   color: #2a2e3d;
 }
 .color.gray7 {
   color: #1f2231 !important;
 }
-.color.gray7.task, .color.gray7.link {
+.color.gray7.task, .color.gray7.link, .color.gray7 .attention {
   border-color: #1f2231 !important;
 }
-.color.gray7.task a, .color.gray7.link a {
+.color.gray7.task a, .color.gray7.link a, .color.gray7 .attention a {
   color: #1f2231;
 }
-.color.gray7.task:after, .color.gray7.link:after {
+.color.gray7.task:after, .color.gray7.link:after, .color.gray7.attention:after {
   color: #1f2231;
 }
 .color.gray8 {
   color: #f1f6f7 !important;
 }
-.color.gray8.task, .color.gray8.link {
+.color.gray8.task, .color.gray8.link, .color.gray8 .attention {
   border-color: #f1f6f7 !important;
 }
-.color.gray8.task a, .color.gray8.link a {
+.color.gray8.task a, .color.gray8.link a, .color.gray8 .attention a {
   color: #f1f6f7;
 }
-.color.gray8.task:after, .color.gray8.link:after {
+.color.gray8.task:after, .color.gray8.link:after, .color.gray8.attention:after {
   color: #f1f6f7;
 }
 .color.gray9 {
   color: #151723 !important;
 }
-.color.gray9.task, .color.gray9.link {
+.color.gray9.task, .color.gray9.link, .color.gray9 .attention {
   border-color: #151723 !important;
 }
-.color.gray9.task a, .color.gray9.link a {
+.color.gray9.task a, .color.gray9.link a, .color.gray9 .attention a {
   color: #151723;
 }
-.color.gray9.task:after, .color.gray9.link:after {
+.color.gray9.task:after, .color.gray9.link:after, .color.gray9.attention:after {
   color: #151723;
 }
 .color.gray3 {
   color: #dde3e8 !important;
 }
-.color.gray3.task, .color.gray3.link {
+.color.gray3.task, .color.gray3.link, .color.gray3 .attention {
   border-color: #dde3e8 !important;
 }
-.color.gray3.task a, .color.gray3.link a {
+.color.gray3.task a, .color.gray3.link a, .color.gray3 .attention a {
   color: #dde3e8;
 }
-.color.gray3.task:after, .color.gray3.link:after {
+.color.gray3.task:after, .color.gray3.link:after, .color.gray3.attention:after {
   color: #dde3e8;
 }
 .color.violet {
   color: #1e1b36 !important;
 }
-.color.violet.task, .color.violet.link {
+.color.violet.task, .color.violet.link, .color.violet .attention {
   border-color: #1e1b36 !important;
 }
-.color.violet.task a, .color.violet.link a {
+.color.violet.task a, .color.violet.link a, .color.violet .attention a {
   color: #1e1b36;
 }
-.color.violet.task:after, .color.violet.link:after {
+.color.violet.task:after, .color.violet.link:after, .color.violet.attention:after {
   color: #1e1b36;
 }
 .color.violet2 {
   color: #41377d !important;
 }
-.color.violet2.task, .color.violet2.link {
+.color.violet2.task, .color.violet2.link, .color.violet2 .attention {
   border-color: #41377d !important;
 }
-.color.violet2.task a, .color.violet2.link a {
+.color.violet2.task a, .color.violet2.link a, .color.violet2 .attention a {
   color: #41377d;
 }
-.color.violet2.task:after, .color.violet2.link:after {
+.color.violet2.task:after, .color.violet2.link:after, .color.violet2.attention:after {
   color: #41377d;
 }
 .color.orange {
   color: #ffba00 !important;
 }
-.color.orange.task, .color.orange.link {
+.color.orange.task, .color.orange.link, .color.orange .attention {
   border-color: #ffba00 !important;
 }
-.color.orange.task a, .color.orange.link a {
+.color.orange.task a, .color.orange.link a, .color.orange .attention a {
   color: #ffba00;
 }
-.color.orange.task:after, .color.orange.link:after {
+.color.orange.task:after, .color.orange.link:after, .color.orange.attention:after {
   color: #ffba00;
 }
 .color.orange2 {
   color: #ff9600 !important;
 }
-.color.orange2.task, .color.orange2.link {
+.color.orange2.task, .color.orange2.link, .color.orange2 .attention {
   border-color: #ff9600 !important;
 }
-.color.orange2.task a, .color.orange2.link a {
+.color.orange2.task a, .color.orange2.link a, .color.orange2 .attention a {
   color: #ff9600;
 }
-.color.orange2.task:after, .color.orange2.link:after {
+.color.orange2.task:after, .color.orange2.link:after, .color.orange2.attention:after {
   color: #ff9600;
 }
 .color.black {
   color: #13121b !important;
 }
-.color.black.task, .color.black.link {
+.color.black.task, .color.black.link, .color.black .attention {
   border-color: #13121b !important;
 }
-.color.black.task a, .color.black.link a {
+.color.black.task a, .color.black.link a, .color.black .attention a {
   color: #13121b;
 }
-.color.black.task:after, .color.black.link:after {
+.color.black.task:after, .color.black.link:after, .color.black.attention:after {
   color: #13121b;
 }
 .color.white {
   color: white !important;
 }
-.color.white.task, .color.white.link {
+.color.white.task, .color.white.link, .color.white .attention {
   border-color: white !important;
 }
-.color.white.task a, .color.white.link a {
+.color.white.task a, .color.white.link a, .color.white .attention a {
   color: white;
 }
-.color.white.task:after, .color.white.link:after {
+.color.white.task:after, .color.white.link:after, .color.white.attention:after {
   color: white;
 }
 .color.gray4 {
   color: #dfeaec !important;
 }
-.color.gray4.task, .color.gray4.link {
+.color.gray4.task, .color.gray4.link, .color.gray4 .attention {
   border-color: #dfeaec !important;
 }
-.color.gray4.task a, .color.gray4.link a {
+.color.gray4.task a, .color.gray4.link a, .color.gray4 .attention a {
   color: #dfeaec;
 }
-.color.gray4.task:after, .color.gray4.link:after {
+.color.gray4.task:after, .color.gray4.link:after, .color.gray4.attention:after {
   color: #dfeaec;
 }
 
 .bgcolor.red {
   background-color: #cb0019;
 }
-.bgcolor.red .task:after, .bgcolor.red .link:after {
+.bgcolor.red .task:after, .bgcolor.red .link:after, .bgcolor.red .attention:after {
   background-color: #cb0019;
 }
 .bgcolor.blue {
   background-color: #092ed8;
 }
-.bgcolor.blue .task:after, .bgcolor.blue .link:after {
+.bgcolor.blue .task:after, .bgcolor.blue .link:after, .bgcolor.blue .attention:after {
   background-color: #092ed8;
 }
 .bgcolor.blue2 {
   background-color: #00bbd1;
 }
-.bgcolor.blue2 .task:after, .bgcolor.blue2 .link:after {
+.bgcolor.blue2 .task:after, .bgcolor.blue2 .link:after, .bgcolor.blue2 .attention:after {
   background-color: #00bbd1;
 }
 .bgcolor.blue3 {
   background-color: #0049c1;
 }
-.bgcolor.blue3 .task:after, .bgcolor.blue3 .link:after {
+.bgcolor.blue3 .task:after, .bgcolor.blue3 .link:after, .bgcolor.blue3 .attention:after {
   background-color: #0049c1;
 }
 .bgcolor.blue4 {
   background-color: cyan;
 }
-.bgcolor.blue4 .task:after, .bgcolor.blue4 .link:after {
+.bgcolor.blue4 .task:after, .bgcolor.blue4 .link:after, .bgcolor.blue4 .attention:after {
   background-color: cyan;
 }
 .bgcolor.blue5 {
   background-color: #00bafb;
 }
-.bgcolor.blue5 .task:after, .bgcolor.blue5 .link:after {
+.bgcolor.blue5 .task:after, .bgcolor.blue5 .link:after, .bgcolor.blue5 .attention:after {
   background-color: #00bafb;
 }
 .bgcolor.blue6 {
   background-color: #244fbf;
 }
-.bgcolor.blue6 .task:after, .bgcolor.blue6 .link:after {
+.bgcolor.blue6 .task:after, .bgcolor.blue6 .link:after, .bgcolor.blue6 .attention:after {
   background-color: #244fbf;
 }
 .bgcolor.blue7 {
   background-color: #0e2a60;
 }
-.bgcolor.blue7 .task:after, .bgcolor.blue7 .link:after {
+.bgcolor.blue7 .task:after, .bgcolor.blue7 .link:after, .bgcolor.blue7 .attention:after {
   background-color: #0e2a60;
 }
 .bgcolor.gray {
   background-color: #474654;
 }
-.bgcolor.gray .task:after, .bgcolor.gray .link:after {
+.bgcolor.gray .task:after, .bgcolor.gray .link:after, .bgcolor.gray .attention:after {
   background-color: #474654;
 }
 .bgcolor.gray2 {
   background-color: #d0d0d4;
 }
-.bgcolor.gray2 .task:after, .bgcolor.gray2 .link:after {
+.bgcolor.gray2 .task:after, .bgcolor.gray2 .link:after, .bgcolor.gray2 .attention:after {
   background-color: #d0d0d4;
 }
 .bgcolor.gray5 {
   background-color: #2f3748;
 }
-.bgcolor.gray5 .task:after, .bgcolor.gray5 .link:after {
+.bgcolor.gray5 .task:after, .bgcolor.gray5 .link:after, .bgcolor.gray5 .attention:after {
   background-color: #2f3748;
 }
 .bgcolor.gray6 {
   background-color: #2a2e3d;
 }
-.bgcolor.gray6 .task:after, .bgcolor.gray6 .link:after {
+.bgcolor.gray6 .task:after, .bgcolor.gray6 .link:after, .bgcolor.gray6 .attention:after {
   background-color: #2a2e3d;
 }
 .bgcolor.gray7 {
   background-color: #1f2231;
 }
-.bgcolor.gray7 .task:after, .bgcolor.gray7 .link:after {
+.bgcolor.gray7 .task:after, .bgcolor.gray7 .link:after, .bgcolor.gray7 .attention:after {
   background-color: #1f2231;
 }
 .bgcolor.gray8 {
   background-color: #f1f6f7;
 }
-.bgcolor.gray8 .task:after, .bgcolor.gray8 .link:after {
+.bgcolor.gray8 .task:after, .bgcolor.gray8 .link:after, .bgcolor.gray8 .attention:after {
   background-color: #f1f6f7;
 }
 .bgcolor.gray9 {
   background-color: #151723;
 }
-.bgcolor.gray9 .task:after, .bgcolor.gray9 .link:after {
+.bgcolor.gray9 .task:after, .bgcolor.gray9 .link:after, .bgcolor.gray9 .attention:after {
   background-color: #151723;
 }
 .bgcolor.gray3 {
   background-color: #dde3e8;
 }
-.bgcolor.gray3 .task:after, .bgcolor.gray3 .link:after {
+.bgcolor.gray3 .task:after, .bgcolor.gray3 .link:after, .bgcolor.gray3 .attention:after {
   background-color: #dde3e8;
 }
 .bgcolor.violet {
   background-color: #1e1b36;
 }
-.bgcolor.violet .task:after, .bgcolor.violet .link:after {
+.bgcolor.violet .task:after, .bgcolor.violet .link:after, .bgcolor.violet .attention:after {
   background-color: #1e1b36;
 }
 .bgcolor.violet2 {
   background-color: #41377d;
 }
-.bgcolor.violet2 .task:after, .bgcolor.violet2 .link:after {
+.bgcolor.violet2 .task:after, .bgcolor.violet2 .link:after, .bgcolor.violet2 .attention:after {
   background-color: #41377d;
 }
 .bgcolor.orange {
   background-color: #ffba00;
 }
-.bgcolor.orange .task:after, .bgcolor.orange .link:after {
+.bgcolor.orange .task:after, .bgcolor.orange .link:after, .bgcolor.orange .attention:after {
   background-color: #ffba00;
 }
 .bgcolor.orange2 {
   background-color: #ff9600;
 }
-.bgcolor.orange2 .task:after, .bgcolor.orange2 .link:after {
+.bgcolor.orange2 .task:after, .bgcolor.orange2 .link:after, .bgcolor.orange2 .attention:after {
   background-color: #ff9600;
 }
 .bgcolor.black {
   background-color: #13121b;
 }
-.bgcolor.black .task:after, .bgcolor.black .link:after {
+.bgcolor.black .task:after, .bgcolor.black .link:after, .bgcolor.black .attention:after {
   background-color: #13121b;
 }
 .bgcolor.white {
   background-color: white;
 }
-.bgcolor.white .task:after, .bgcolor.white .link:after {
+.bgcolor.white .task:after, .bgcolor.white .link:after, .bgcolor.white .attention:after {
   background-color: white;
 }
 .bgcolor.gray4 {
   background-color: #dfeaec;
 }
-.bgcolor.gray4 .task:after, .bgcolor.gray4 .link:after {
+.bgcolor.gray4 .task:after, .bgcolor.gray4 .link:after, .bgcolor.gray4 .attention:after {
   background-color: #dfeaec;
 }
 .bgcolor a {
@@ -984,7 +989,7 @@ a.big-button.gray4:hover, .resp_slider .item .content a.button.gray4:hover {
   position: relative;
   padding: 45px 0;
 }
-.block .task, .block .link {
+.block .task, .block .link, .block .attention {
   min-width: 466px;
   display: inline-block;
   margin: 0 auto;
@@ -995,7 +1000,7 @@ a.big-button.gray4:hover, .resp_slider .item .content a.button.gray4:hover {
   line-height: 29px;
   position: relative;
 }
-.block .task:after, .block .link:after {
+.block .task:after, .block .link:after, .block .attention:after {
   position: absolute;
   content: "Задача";
   text-transform: uppercase;
@@ -1005,9 +1010,10 @@ a.big-button.gray4:hover, .resp_slider .item .content a.button.gray4:hover {
   letter-spacing: 2px;
   left: 50%;
   padding: 0 20px;
+  -webkit-transform: translateX(-50%);
   -moz-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
-  -webkit-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
   transform: translateX(-50%);
   background: white;
 }
@@ -1016,6 +1022,12 @@ a.big-button.gray4:hover, .resp_slider .item .content a.button.gray4:hover {
 }
 .block .link:after {
   content: "Где посмотреть";
+}
+.block .attention {
+  font-size: 26px;
+}
+.block .attention:after {
+  content: "Обращаем внимание";
 }
 .block.bgimg {
   background-position: top center;
@@ -1067,13 +1079,13 @@ a.big-button.gray4:hover, .resp_slider .item .content a.button.gray4:hover {
   line-height: 19px;
   margin-bottom: 0px;
   font-size: 15px;
+  -webkit-transition-property: background, opacity, color;
   -moz-transition-property: background, opacity, color;
   -o-transition-property: background, opacity, color;
-  -webkit-transition-property: background, opacity, color;
   transition-property: background, opacity, color;
+  -webkit-transition-duration: 0.4s;
   -moz-transition-duration: 0.4s;
   -o-transition-duration: 0.4s;
-  -webkit-transition-duration: 0.4s;
   transition-duration: 0.4s;
 }
 #services .item {
@@ -1240,8 +1252,8 @@ a.file:hover, #Order input[type=submit]:hover {
   background: #f64531;
 }
 #Order .modal-content input[type=submit]:hover {
-  -moz-box-shadow: 2px 2px 0 0 rgba(177, 32, 20, 0.5);
   -webkit-box-shadow: 2px 2px 0 0 rgba(177, 32, 20, 0.5);
+  -moz-box-shadow: 2px 2px 0 0 rgba(177, 32, 20, 0.5);
   box-shadow: 2px 2px 0 0 rgba(177, 32, 20, 0.5);
   opacity: 1;
 }
@@ -1666,12 +1678,6 @@ h3.title {
 }
 h3.title.big {
   font-size: 50px;
-}
-
-h1.title, h2.title, h3.title {
-  margin-left: -15px;
-  margin-right: -15px;
-  padding-left: 15px;
 }
 
 p {
