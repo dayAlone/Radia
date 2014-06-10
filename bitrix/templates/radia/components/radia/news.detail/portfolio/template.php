@@ -52,7 +52,7 @@
     <div class="block white  no-bottom-padding">
       <div class="container">
         <h1 class="title color black">
-          <?=$arResult['NAME']?>
+          <?=$arResult['~NAME']?>
         </h1>
       </div>
     </div>
