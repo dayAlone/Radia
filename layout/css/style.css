@@ -947,7 +947,7 @@ a.big-button.gray4:hover, .resp_slider .item .content a.button.gray4:hover {
   font-weight: 700;
   font-size: 70px;
   line-height: 70px;
-  letter-spacing: 3px;
+  letter-spacing: 0px;
 }
 #title .big-button {
   font-size: 20px;
