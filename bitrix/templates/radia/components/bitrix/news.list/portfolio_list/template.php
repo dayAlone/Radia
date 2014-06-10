@@ -17,11 +17,11 @@
                 <a href="<?=$arItem['DETAIL_PAGE_URL']?>" class="item" style="background-image: url(http://radia.ru<?=$arItem['PREVIEW_PICTURE']['SRC']?>)">
                   <span class="over">
                     <span class="text">
-                      <span class="name"><?=$arItem['NAME']?></span><span class="line"></span><span class="type">
+                      <span class="name"><?=strip_tags($arItem['~NAME'])?></span><span class="line"></span><span class="type">
                         <?
                         $res = CIBlockSection::GetByID($arItem["IBLOCK_SECTION_ID"]);
                         if($ar_res = $res->GetNext())
-                          echo $ar_res['NAME'];
+                          echo strip_tags($ar_res['~NAME']);
                         ?>
                       </span>  
                     </span>

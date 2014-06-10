@@ -8,7 +8,7 @@ if (CModule::IncludeModule("iblock") && isset($_REQUEST['CODE'])):
 	$ar_result = $db_list->GetNext();
 	if($ar_result['ID']>0) {
 		$cat['ID'] = $ar_result['ID'];
-		$cat['NAME'] = $ar_result['NAME'];
+		$cat['NAME'] = strip_tags($ar_result['NAME']);
 	}
 	else {
 		$list = false;
@@ -18,7 +18,7 @@ if (CModule::IncludeModule("iblock") && isset($_REQUEST['CODE'])):
 		while($ob = $res->GetNextElement())
 		{
 		 $arFields = $ob->GetFields();
-		 $item['NAME'] = $arFields['NAME'];
+		 $item['NAME'] = strip_tags($arFields['~NAME']);
 		}
 	}
 endif;
@@ -34,6 +34,11 @@ if($list) {
         if(strlen($_REQUEST["CODE"])>0) {?>
 			<div id="filter" data-code=".<?=$_REQUEST["CODE"]?>"></div>
         <?}
+        global $USER;
+        if($USER->isAdmin()):
+        	global $arFilter;
+        	$arFilter = array('ACTIVE'=>array('N','Y'));
+        endif;
       	$APPLICATION->IncludeComponent("bitrix:news.list", "portfolio", array(
 			"IBLOCK_TYPE" => "content",
 			"IBLOCK_ID" => "5",
@@ -42,7 +47,7 @@ if($list) {
 			"SORT_ORDER1" => "DESC",
 			"SORT_BY2" => "ACTIVE_FROM",
 			"SORT_ORDER2" => "DESC",
-			"FILTER_NAME" => "",
+			"FILTER_NAME" => "arFilter",
 			"FIELD_CODE" => array(
 				0 => "CODE",
 				1 => "NAME",
@@ -84,7 +89,8 @@ if($list) {
 			"PAGER_DESC_NUMBERING" => "N",
 			"PAGER_DESC_NUMBERING_CACHE_TIME" => "3600",
 			"PAGER_SHOW_ALL" => "N",
-			"AJAX_OPTION_ADDITIONAL" => ""
+			"AJAX_OPTION_ADDITIONAL" => "",
+			"FILTER_NAME" => "arFilter"
 			),
 			false
 		);
@@ -99,12 +105,18 @@ if($list) {
 	$APPLICATION->SetDirProperty("phrase_button", "Готов сделать заявку");
 	?>
 
-	<?$APPLICATION->IncludeComponent("bitrix:news.detail", "portfolio", array(
+	<?
+	global $USER;
+    if($USER->isAdmin()):
+    	global $arFilter;
+    	$arFilter = array('ACTIVE'=>array('N','Y'));
+    endif;
+	$APPLICATION->IncludeComponent("radia:news.detail", "portfolio", array(
 	"IBLOCK_TYPE" => "content",
 	"IBLOCK_ID" => "5",
 	"ELEMENT_ID" => "",
 	"ELEMENT_CODE" => $_REQUEST["CODE"],
-	"CHECK_DATES" => "Y",
+	"CHECK_DATES" => "N",
 	"FIELD_CODE" => array(
 		0 => "",
 		1 => "",
