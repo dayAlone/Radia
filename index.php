@@ -199,7 +199,8 @@
         </h3>
         <div class="items">
           <?
-          
+          	global $arFilter;
+          	$arFilter = array("!PROPERTY_INDEX"=>false);
           	$APPLICATION->IncludeComponent("bitrix:news.list", "clients_index", array(
 				"IBLOCK_TYPE" => "content",
 				"IBLOCK_ID" => "4",
@@ -208,7 +209,7 @@
 				"SORT_ORDER1" => "DESC",
 				"SORT_BY2" => "ACTIVE_FROM",
 				"SORT_ORDER2" => "DESC",
-				"FILTER_NAME" => "",
+				"FILTER_NAME" => "arFilter",
 				"FIELD_CODE" => array(
 					0 => "CODE",
 					1 => "PREVIEW_PICTURE",
