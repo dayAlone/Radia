@@ -1,5 +1,47 @@
 <?
 	require_once ($_SERVER['DOCUMENT_ROOT']."/bitrix/modules/main/include.php");
+	global $USER;
+	if(!$USER->GetID()) {
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+    <!--[if gte IE 6]>
+    <style>
+    #container {margin-top: expression( this . parentNode . offsetHeight > this . offsetHeight ?(( this . parentNode . offsetHeight-this . offsetHeight ) / 2 + "px" ) : "0" );}
+</style>
+<![endif]-->
+<style>
+* {margin: 0; padding: 0;}
+html, body {height: 100%; width: 100%; background:#d2d2d2;}
+html {display: table;}
+body {display: table-cell; vertical-align: middle;}
+#centered {text-align:center;}
+</style>
+<title>RADIA Visual communications</title>
+</head>
+
+<body>
+<div id="centered"><img src="radia-title.jpg" alt="RADIA" width="650" height="650" border="0" usemap="#Map" />
+  <map name="Map" id="Map">
+    <area shape="rect" coords="272,568,379,585" href="mailto:&#104;&#101;&#108;&#108;&#111;&#064;&#114;&#097;&#100;&#105;&#097;&#046;&#114;&#117;" />
+  </map>
+</div>
+</body>
+<!-- Yandex.Metrika counter -->
+<script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript"></script>
+<div style="display:none;"><script type="text/javascript">
+try { var yaCounter232556 = new Ya.Metrika({id:232556,
+          clickmap:true, webvisor:true});}
+catch(e) { }
+</script></div>
+<noscript><div><img src="//mc.yandex.ru/watch/232556" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+</html>
+<?
+	} else {
+	require_once ($_SERVER['DOCUMENT_ROOT']."/bitrix/modules/main/include.php");
 	require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 	$APPLICATION->SetTitle("RADIA Interactive");
 ?> <?$APPLICATION->IncludeComponent("radia:resp_slider", ".default", array(
@@ -257,5 +299,5 @@
 
 <?
 	require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");
-
+}
 ?>
