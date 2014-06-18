@@ -48,6 +48,7 @@ $(document).ready ->
 			 , 300
 		return false
 	$('#toolbar .order, #footer .big-button, .big-button.order').on 'click', (e)->
+		yaCounter24066202.reachGoal('form')
 		$('#Order').modal()
 		e.preventDefault()
 	
@@ -89,6 +90,7 @@ $(document).ready ->
 						getCaptcha()
 						form.find('input[name=captcha_word]').addClass('parsley-error').val('')
 					else
+						yaCounter24066202.reachGoal('send')
 						$('#Order .form').addClass('hidden')
 						$('#Order .success').removeClass('hidden')
 						
