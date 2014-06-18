@@ -1152,7 +1152,7 @@ a.file, #Order input[type=submit] {
   border: 0;
   color: white;
   line-height: 33px;
-  background: #00bbd1;
+  background: #2a2e3b;
   padding: 2px 20px 0;
 }
 a.file:hover, #Order input[type=submit]:hover {
@@ -1274,6 +1274,7 @@ a.file:hover, #Order input[type=submit]:hover {
   border: 0;
   border-radius: 0;
   line-height: 28px;
+  font-family: "Helvetica Neue", "Arial";
   padding: 3px 10px;
   background: #2a2e3c url(/layout/images/arrow.png) 98% 13px no-repeat;
   appearance: button;
