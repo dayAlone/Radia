@@ -23,7 +23,7 @@ $APPLICATION->SetTitle("Адаптивный слайдер");
 	"SLIDE_AUTOPLAY" => "Y",
 	"SLIDE_SPEED" => "4",
 	"CACHE_TYPE" => "A",
-	"CACHE_TIME" => "36000000"
+	"CACHE_TIME" => "3600"
 	),
 	false
 );?>
