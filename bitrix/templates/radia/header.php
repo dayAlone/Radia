@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <meta name="format-detection" content="telephone=no">
-
+    <meta name='yandex-verification' content='5ecdc93b1995ed1b' />
     
     
     <!--[if IE]>
