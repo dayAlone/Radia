@@ -39,15 +39,15 @@ if($list) {
         	global $arFilter;
         	$arFilter = array('ACTIVE'=>array('N','Y'));
         endif;
-      	$APPLICATION->IncludeComponent("bitrix:news.list", "portfolio", array(
+        $APPLICATION->IncludeComponent("bitrix:news.list", "portfolio", array(
 			"IBLOCK_TYPE" => "content",
 			"IBLOCK_ID" => "5",
-			"NEWS_COUNT" => "54",
+			"NEWS_COUNT" => "100",
 			"SORT_BY1" => "SORT",
 			"SORT_ORDER1" => "DESC",
 			"SORT_BY2" => "ACTIVE_FROM",
 			"SORT_ORDER2" => "DESC",
-			"FILTER_NAME" => "arFilter",
+			"FILTER_NAME" => ($USER->isAdmin()?"arFilter":""),
 			"FIELD_CODE" => array(
 				0 => "CODE",
 				1 => "NAME",
@@ -89,8 +89,7 @@ if($list) {
 			"PAGER_DESC_NUMBERING" => "N",
 			"PAGER_DESC_NUMBERING_CACHE_TIME" => "3600",
 			"PAGER_SHOW_ALL" => "N",
-			"AJAX_OPTION_ADDITIONAL" => "",
-			"FILTER_NAME" => "arFilter"
+			"AJAX_OPTION_ADDITIONAL" => ""
 			),
 			false
 		);
