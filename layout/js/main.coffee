@@ -29,7 +29,7 @@ $(document).ready ->
 
 	$('#slider-arrow').click (e)->
 		$("html, body").animate
-			 scrollTop: $(window).height()-$('#toolbar').height()
+			 scrollTop: $(window).height()
 			 , 300
 		e.preventDefault()
 

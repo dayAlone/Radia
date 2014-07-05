@@ -40,7 +40,7 @@
     size();
     $('#slider-arrow').click(function(e) {
       $("html, body").animate({
-        scrollTop: $(window).height() - $('#toolbar').height()
+        scrollTop: $(window).height()
       }, 300);
       return e.preventDefault();
     });
