@@ -61,6 +61,21 @@ a:hover, a span:hover, a img:hover, .social:hover, .contacts:hover {
   text-decoration: none;
 }
 
+#slider-arrow {
+  cursor: pointer;
+  float: left;
+  width: 100%;
+  position: relative;
+  margin-top: -70px;
+  text-align: center;
+}
+#slider-arrow.white svg path {
+  fill: white;
+}
+#slider-arrow svg {
+  display: inline-block;
+}
+
 #panel a, #panel span, #panel img {
   -moz-transition: none;
   -webkit-transition: none;

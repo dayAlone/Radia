@@ -38,6 +38,18 @@
       }
     });
     size();
+    $('#slider-arrow').click(function(e) {
+      $("html, body").animate({
+        scrollTop: $(window).height() - $('#toolbar').height()
+      }, 300);
+      return e.preventDefault();
+    });
+    $('#radia-resp-slider').on('fotorama:showend', function() {
+      $('#slider-arrow').removeClass();
+      if ($('#radia-resp-slider').hasClass('background--dark')) {
+        return $('#slider-arrow').addClass('white');
+      }
+    });
     $('.sections a').click(function(e) {
       var code, href;
       code = $(this).data('code');

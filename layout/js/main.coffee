@@ -27,6 +27,16 @@ $(document).ready ->
 
 	size()
 
+	$('#slider-arrow').click (e)->
+		$("html, body").animate
+			 scrollTop: $(window).height()-$('#toolbar').height()
+			 , 300
+		e.preventDefault()
+
+	$('#radia-resp-slider').on 'fotorama:showend', ()->
+		$('#slider-arrow').removeClass()
+		$('#slider-arrow').addClass('white') if $('#radia-resp-slider').hasClass('background--dark')
+
 	$('.sections a').click (e)->
 		code = $(this).data 'code'
 		href = $(this).attr('href')
